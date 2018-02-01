@@ -1,0 +1,6 @@
+.btn, .post-entry a, .read-more{display:inline-block;font-size:14px;padding:8px 15px;border-radius:19px;text-decoration:none !important;text-align:center;transition:all .4s ease-in-out; -webkit-transition:all .4s ease-in-out;z-index:3;position:relative;}
+.btn-green, .read-more{background:rgb(180, 190, 129);color:#fff;padding:8px 25px;}
+.btn-greenborder{border:2px solid rgba(180, 190, 129,.3);color:rgb(180, 190, 129);}
+.btn-border{border:2px solid rgba(255,255,255,.3);color:#fff;}
+.read-more{width:145px;display:inline-block;}
+.read-more a{color:#fff !important;text-decoration:none !important;}

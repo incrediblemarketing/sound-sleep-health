@@ -1,0 +1,9 @@
+h1, h2, h3, h4, h5, h6{margin:0;font-family: 'Playfair Display', serif;}
+h1{font-size:4.5em;color: #333;font-weight:300;}/*98px*/
+h2{font-size:3.75em;color: #68ceff;}/*63px*/
+h3, .sidebar .widget-title, .sidebar .widget-title-home h3{font-size:2em;font-weight:300;margin-bottom:10px;    font-family: 'Open Sans', sans-serif;}/*55px*/
+h4{font-size: 1.3em;font-weight: 600;}
+h5{font-size:1em;font-weight: 600;}/*24px*/
+h6{font-size:1em;}/*30px*/
+h1.border, h3.border{text-align:center;position:relative;font-family:'Playfair Display', serif;font-weight:300;}
+h1.border:after, h3.border:after{content:'';display:block;width:150px;height:2px;background:rgb(180, 190, 129);margin:30px auto;}
