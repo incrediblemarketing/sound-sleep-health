@@ -1,17 +1,3 @@
-	<?php
-/**
- * Header Template
- *
- *
- * @file           header.php
- * @package        IncredibleTheme 
- * @author         Incredible Marketing
- * @copyright      2017 Incredible Marketing
- * @license        license.txt
- * @version        Release: 1.0
-  * @since         available since Release 1.0
- */
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 

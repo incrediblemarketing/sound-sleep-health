@@ -1,18 +1,3 @@
-<?php
-/**
- * Error 404 Template
- *
- *
- * @file           404.php
- * @package        StrapPress 
- * @author         Brad Williams 
- * @copyright      2010 - 2015 Brag Interactive
- * @license        license.txt
- * @version        Release: 3.3.6
- * @link           http://codex.wordpress.org/Creating_an_Error_404_Page
- * @since          available since Release 1.0
- */
-?>
 <?php get_header(); ?>
 
 <div class="row justify-content-center">

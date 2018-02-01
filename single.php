@@ -1,18 +1,3 @@
-<?php
-/**
- * Single Posts Template
- *
- *
- * @file           single.php
- * @package        StrapPress 
- * @author         Brad Williams 
- * @copyright      2011 - 2014 Brag Interactive
- * @license        license.txt
- * @version        Release: 3.2.0.1
- * @link           http://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29
- * @since          available since Release 1.0
- */
-?>
 <?php get_header(); ?>
 <?php if(is_singular( array( 'procedure', 'testimonial', 'team' ) )){ ?>
 	<?php get_template_part( 'page-template/content', 'page' ); ?>
