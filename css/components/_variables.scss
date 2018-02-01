@@ -2,16 +2,15 @@ $primary-color: #a71478;
 $secondary-color: #000;
 $font-color: #646464;
 
-
 @mixin transition($time){
-	transition: $time;
-  	-webkit-transition: $time;
-  	-moz-transition: $time;
-  	-o-transition: $time;
+  transition: $time;
+    -webkit-transition: $time;
+    -moz-transition: $time;
+    -o-transition: $time;
 }
 
 @mixin transform($transform){
-	-ms-transform: $transform;
-	-webkit-transform: $transform;
-	transform: $transform;
+  -ms-transform: $transform;
+  -webkit-transform: $transform;
+  transform: $transform;
 }
