@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php if(is_singular( array( 'procedure', 'testimonial', 'team' ) )){ ?>
-  <?php get_template_part( 'page-template/content', 'page' ); ?>
+  <?php get_template_part('components/sections'); ?>
 <?php }else{ ?>
   <div class="row justify-content-center sh-row leaf-bg">
     <div class="col-xl-6 col-sm-7 col-12 sh-col">
