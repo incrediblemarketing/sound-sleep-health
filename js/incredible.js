@@ -1,53 +1,55 @@
 'use strict';
 
-function stickyHeader(){
-  var stickyTop = jQuery('#header').height() + 200;
+(function($) {
 
-  jQuery(window).scroll(function(){
-    if(jQuery(window).scrollTop() >= stickyTop){
-      jQuery('#stickyHeader').addClass('slideDown');
+function stickyHeader(){
+  var stickyTop = $('#header').height() + 200;
+
+  $(window).scroll(function(){
+    if($(window).scrollTop() >= stickyTop){
+      $('#stickyHeader').addClass('slideDown');
     }else{
-      jQuery('#stickyHeader').removeClass('slideDown');
+      $('#stickyHeader').removeClass('slideDown');
     }
   });
 }
 
 function dataAttributes(){
-  jQuery('[data-bg]').each(function(){
-    var bg = jQuery(this).data('bg');
-    jQuery(this).css('background','#fff url("'+bg+'") top center/cover no-repeat');
+  $('[data-bg]').each(function(){
+    var bg = $(this).data('bg');
+    $(this).css('background','#fff url("'+bg+'") top center/cover no-repeat');
   });
   
-  jQuery('[data-bgc]').each(function(){
-    var bgcolor = jQuery(this).data('bgc');
-    jQuery(this).css('background-color',bgcolor);
+  $('[data-bgc]').each(function(){
+    var bgcolor = $(this).data('bgc');
+    $(this).css('background-color',bgcolor);
   });
   
-  jQuery('[data-color]').each(function(){
-    var color = jQuery(this).data('color');
-    jQuery(this).css('color',color);
+  $('[data-color]').each(function(){
+    var color = $(this).data('color');
+    $(this).css('color',color);
   });
   
-  jQuery('[data-size]').each(function(){
-    var size = jQuery(this).data('size');
-    jQuery(this).css('font-size', size);
+  $('[data-size]').each(function(){
+    var size = $(this).data('size');
+    $(this).css('font-size', size);
   });
 }
 
 function gMaps(){              
-  if(jQuery('#map').length > 0){
+  if($('#map').length > 0){
     var longitude = 0;
     var latitude = 0;
     var overlay = 0;
     
-    jQuery('[data-long]').each(function(){
-      longitude = jQuery(this).data('long');
+    $('[data-long]').each(function(){
+      longitude = $(this).data('long');
     });
-    jQuery('[data-lat]').each(function(){
-      latitude = jQuery(this).data('lat');
+    $('[data-lat]').each(function(){
+      latitude = $(this).data('lat');
     });
-    jQuery('[data-co]').each(function(){
-       overlay = jQuery(this).data('co');
+    $('[data-co]').each(function(){
+       overlay = $(this).data('co');
     });
     if(overlay){
       var myArea = new google.maps.LatLng(longitude,latitude);
@@ -89,37 +91,37 @@ function gMaps(){
 
 
 function equalHeights(){
-  if(jQuery('.sh-row').length > 0) {
-    var $w = jQuery(window).width();
+  if($('.sh-row').length > 0) {
+    var $w = $(window).width();
     if($w > 768){
-    jQuery('.sh-row').each(function(){  
+    $('.sh-row').each(function(){  
       var highestBox = 0;
-      jQuery('.sh-col', this).each(function(){
-        if(jQuery(this).height() > highestBox) {
-          highestBox = jQuery(this).height(); 
+      $('.sh-col', this).each(function(){
+        if($(this).height() > highestBox) {
+          highestBox = $(this).height(); 
         }
       });  
-      jQuery('.sh-col',this).height(highestBox);
+      $('.sh-col',this).height(highestBox);
     }); 
     }
   }
 }
 
 function procedureToggle(){
-  jQuery('.procedure-header').click(function(){
-    if(!jQuery(this).hasClass('active')){
-      jQuery('.procedure-info.active').toggle('slow');
-      jQuery('.procedure-info.active').toggleClass('active');
-      jQuery('.procedure-header.active').toggleClass('active');
+  $('.procedure-header').click(function(){
+    if(!$(this).hasClass('active')){
+      $('.procedure-info.active').toggle('slow');
+      $('.procedure-info.active').toggleClass('active');
+      $('.procedure-header.active').toggleClass('active');
     }
-    jQuery(this).next('.procedure-info').toggle('slow');
-    jQuery(this).next('.procedure-info').toggleClass('active');
-    jQuery(this).toggleClass('active');
+    $(this).next('.procedure-info').toggle('slow');
+    $(this).next('.procedure-info').toggleClass('active');
+    $(this).toggleClass('active');
   });
 }
 
 function homeProcedures(){
-  jQuery('#procedures .owl-carousel').owlCarousel({
+  $('#procedures .owl-carousel').owlCarousel({
     loop:false,
     margin:0,
     nav:true,
@@ -142,7 +144,7 @@ function homeProcedures(){
 }
 
 function miniGallery(){
-  jQuery('.mini-gallery').owlCarousel({
+  $('.mini-gallery').owlCarousel({
     loop:false,
     margin:0,
     nav:true,
@@ -152,7 +154,7 @@ function miniGallery(){
 }
 
 function recentPosts(){
-  jQuery('.postsslider').owlCarousel({
+  $('.postsslider').owlCarousel({
     loop:false,
     margin:30,
     nav:true,
@@ -172,7 +174,7 @@ function recentPosts(){
 }
 
 function testimonialsRotator(){
-  jQuery('.testimonials-rotator').owlCarousel({
+  $('.testimonials-rotator').owlCarousel({
     loop:true,
     margin:30,
     nav:true,
@@ -182,7 +184,7 @@ function testimonialsRotator(){
 }
 
 function proceduresRotator(){
-  var procedures = jQuery('.procedures-rotator');
+  var procedures = $('.procedures-rotator');
   procedures.owlCarousel({
     loop:true,
     margin:0,
@@ -202,18 +204,18 @@ function proceduresRotator(){
     }
   });
   
-  jQuery('.procedures').hover(function(){
-    jQuery(this).find('.info, .cover').fadeToggle(300);
+  $('.procedures').hover(function(){
+    $(this).find('.info, .cover').fadeToggle(300);
   });
 }
 
 function scrolltoID(){
-  jQuery('.scroll').click(function() {
-    jQuery('body').animate({scrollTop: jQuery('#' + jQuery(this).attr('target')).offset().top - 70}, 1000);
+  $('.scroll').click(function() {
+    $('body').animate({scrollTop: $('#' + $(this).attr('target')).offset().top - 70}, 1000);
   });
 }
 
-jQuery(document).ready(function(){
+$(document).ready(function(){
   stickyHeader();
   dataAttributes();
   proceduresRotator();
@@ -225,10 +227,12 @@ jQuery(document).ready(function(){
   scrolltoID();
 });
 
-jQuery(window).load(function(){
+$(window).load(function(){
   equalHeights();
 });
 
-jQuery(window).resize(function(){
+$(window).resize(function(){
   equalHeights();
 });
+
+})(jQuery);
