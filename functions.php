@@ -266,7 +266,7 @@ function reusable_page_section($atts) {
     while ( have_rows('reusable_page_sections', 'options') ) : the_row();
       $id = get_sub_field('id');
       if ($a['id'] == $id) {
-        echo get_template_part('page-template/content', 'page');
+        echo get_template_part('components/sections');
       }
     endwhile;
   endif;
