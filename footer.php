@@ -17,7 +17,6 @@
   }
 ?>
 <footer id="footer" class="clearfix container-fluid">
-  <div id="map" data-lat="<?php echo $lat; ?>" data-long="<?php echo $long; ?>" data-co="<?php echo $mc; ?>"></div>
   <div class="row justify-content-center">
     <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12">
       <h3 class="text-center">Contact Us</h3>
