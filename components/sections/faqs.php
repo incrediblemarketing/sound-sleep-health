@@ -11,8 +11,8 @@ $pad = get_sub_field('padding');
 $bt = get_sub_field('button_text');
 $bu = get_sub_field('button_url');
 
-echo '<div class="row sh-row faqs ' . $rc . '" data-color="'.$fc.'" data-size="'.$fs.'" data-bgc="'.$bc.'">';
-  echo '<div class="' . $c1c .' ' .$ta  . ' sh-col">';
+echo '<div class="row faqs ' . $rc . '" data-color="'.$fc.'" data-size="'.$fs.'" data-bgc="'.$bc.'">';
+  echo '<div class="' . $c1c .' ' .$ta  . '">';
     if($pad){echo '<div class="'.$pad.'">';}
       echo '<h3>'.$title.'</h3>';
       if( have_rows('q_a') ):
