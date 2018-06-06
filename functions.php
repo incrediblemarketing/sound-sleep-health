@@ -142,7 +142,7 @@ add_action( 'init', 'cptui_register_my_cpts' );
     wp_register_style( 'bootstrapstyle', get_template_directory_uri() . '/assets/Bootstrap/css/bootstrap.min.css');
     wp_register_style( 'owlstyle', get_stylesheet_directory_uri() . '/assets/OwlCarousel/assets/owl.carousel.min.css');
     wp_register_style( 'owltheme', get_stylesheet_directory_uri() . '/assets/OwlCarousel/assets/owl.theme.default.min.css');
-    wp_register_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css');
+    wp_register_style( 'fontawesome', get_stylesheet_directory_uri() . '/assets/fontawesome-pro-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css');
 
     wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-2.2.3.min.js');
     wp_register_script( 'tether', get_template_directory_uri() . '/assets/tether-1.3.3/dist/js/tether.min.js');

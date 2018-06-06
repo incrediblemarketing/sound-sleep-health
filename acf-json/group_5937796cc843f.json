@@ -1,23 +1,6 @@
 {
     "key": "group_5937796cc843f",
     "title": "Options Panel",
-    "location": [
-        [
-            {
-                "param": "options_page",
-                "operator": "==",
-                "value": "theme-general-settings"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "left",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
-    "description": "",
     "fields": [
         {
             "key": "field_59378557d6d54",
@@ -687,14 +670,14 @@
                         "id": ""
                     },
                     "choices": {
-                        "facebook": "Facebook",
+                        "facebook-f": "Facebook",
                         "instagram": "Instagram",
                         "pinterest-p": "Pinterest",
                         "twitter": "Twitter",
                         "linkedin": "LinkedIn",
                         "youtube": "YouTube",
                         "vimeo": "Vimeo",
-                        "google-plus": "Google Plus",
+                        "google-plus-g": "Google Plus",
                         "yelp": "Yelp",
                         "phone": "Phone Number",
                         "envelope-o": "Email",
@@ -895,5 +878,22 @@
             "maxlength": ""
         }
     ],
-    "modified": 1517419235
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1528318837
 }
