@@ -325,6 +325,14 @@ function incredible__register_required_plugins() {
     ),
 
     array(
+      'name'               => 'Gravity Forms',
+      'slug'               => 'gravityforms',
+      'source'             => get_template_directory() . '/plugins/gravityforms_2.2.6.1.zip',
+      'external_url'       => 'https://www.gravityforms.com/',
+      'required'           => true,
+    ),
+
+    array(
       'name'      => 'All in One SEO Pack',
       'slug'      => 'all-in-one-seo-pack',
       'required'  => true,
@@ -336,28 +344,6 @@ function incredible__register_required_plugins() {
       'source'             => get_template_directory() . '/plugins/wpmudev-updates.zip',
       'external_url'       => 'https://premium.wpmudev.org/project/wpmu-dev-dashboard/',
       'required'           => false,
-    ),
-
-    array(
-      'name'         => 'CFDB',
-      'slug'         => 'contact-form-7-to-database-extension',
-      'source'       => 'https://github.com/mdsimpson/contact-form-7-to-database-extension/releases/download/2.10.34/contact-form-7-to-database-extension-2.10.34.zip',
-      'external_url' => 'https://cfdbplugin.com/',
-      'required'     => false,
-    ),
-
-    array(
-      'name'         => 'GitHub Updater',
-      'slug'         => 'github-updater',
-      'source'       => 'https://github.com/afragen/github-updater/archive/7.5.0.zip',
-      'external_url' => 'https://github.com/afragen/github-updater',
-      'required'     => false,
-    ),
-
-    array(
-      'name'      => 'Contact Form 7',
-      'slug'      => 'contact-form-7',
-      'required'  => false,
     ),
 
     array(
