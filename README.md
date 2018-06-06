@@ -4,7 +4,7 @@ WordPress theme for custom builds.
 ## Assets
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 * [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/index.html)
-* [Font Awesome 4](https://fontawesome.com/icons?from=io) (updating to 5 soon)
+* [Font Awesome 5 Pro](https://fontawesome.com/)
 * [TweenMax](https://greensock.com/docs/TweenMax)
 * [ScrollMagic](http://scrollmagic.io/)
 
@@ -46,5 +46,6 @@ At this point you should have `incredibletheme` installed with all custom field 
 Licenses, addons, etc.
 
 * [Advanced Custom Fields Pro](https://podio.com/incrediblemarketingcom/dev-area-2/apps/dev-assets/items/11)
+* [Font Awesome 5 Pro](https://podio.com/incrediblemarketingcom/dev-area-2/apps/dev-assets/items/30)
 * [Gravity Forms](https://podio.com/incrediblemarketingcom/dev-area-2/apps/dev-assets/items/35)
 * [WPMU Dev Dashboard](https://podio.com/incrediblemarketingcom/dev-area-2/apps/dev-assets/items/16)
