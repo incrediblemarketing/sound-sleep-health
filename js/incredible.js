@@ -89,24 +89,6 @@ function gMaps(){
   }
 }
 
-
-function equalHeights(){
-  if($('.sh-row').length > 0) {
-    var $w = $(window).width();
-    if($w > 768){
-    $('.sh-row').each(function(){  
-      var highestBox = 0;
-      $('.sh-col', this).each(function(){
-        if($(this).height() > highestBox) {
-          highestBox = $(this).height(); 
-        }
-      });  
-      $('.sh-col',this).height(highestBox);
-    }); 
-    }
-  }
-}
-
 function procedureToggle(){
   $('.procedure-header').click(function(){
     if(!$(this).hasClass('active')){
@@ -228,11 +210,11 @@ $(document).ready(function(){
 });
 
 $(window).load(function(){
-  equalHeights();
+
 });
 
 $(window).resize(function(){
-  equalHeights();
+
 });
 
 })(jQuery);
