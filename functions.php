@@ -184,6 +184,7 @@ add_action( 'init', 'cptui_register_my_cpts' );
       'menu_slug'   => 'theme-general-settings',
       'capability'  => 'edit_posts',
       'redirect'    => false,
+      'parent_slug' => 'options-general.php'
       //'icon_url' => 'dashicons-images-alt2',
     ));
   }
