@@ -147,10 +147,13 @@ add_action( 'init', 'cptui_register_my_cpts' );
     wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-2.2.3.min.js');
     wp_register_script( 'tether', get_template_directory_uri() . '/assets/tether-1.3.3/dist/js/tether.min.js');
     wp_register_script( 'owlcarousel', get_stylesheet_directory_uri() . '/assets/OwlCarousel/owl.carousel.min.js', array('jquery'), '4.8', true);
-    
     wp_register_script( 'map','https://maps.googleapis.com/maps/api/js?key=&v=3.exp');
     wp_register_script( 'gmaps', get_stylesheet_directory_uri() . '/assets/GMaps/gmaps.min.js');
     wp_register_script( 'bootstrap', get_template_directory_uri() . '/assets/Bootstrap/js/bootstrap.min.js');
+    wp_register_script('tweenmax','https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js','','',true);
+    wp_register_script('scrollmagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js','','',true);
+    wp_register_script('scrollanimation','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js','','',true);
+    wp_register_script('scrollindicator', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js','','',true);
     wp_register_script( 'incredible', get_template_directory_uri() . '/js/incredible.js');
     
     wp_enqueue_style('tetherstyle');
@@ -166,6 +169,12 @@ add_action( 'init', 'cptui_register_my_cpts' );
     wp_enqueue_script('map');
     wp_enqueue_script('gmaps');
     wp_enqueue_script('bootstrap');
+    
+    wp_enqueue_script('tweenmax');
+    wp_enqueue_script('scrollmagic');
+    wp_enqueue_script('scrollanimation');
+    // wp_enqueue_script('scrollindicator');
+
     wp_enqueue_script('incredible');
   }
   add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
