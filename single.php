@@ -1,87 +1,27 @@
 <?php get_header(); ?>
-<?php if(is_singular( array( 'procedure', 'testimonial', 'team' ) )){ ?>
-  <?php get_template_part('components/sections'); ?>
-<?php }else{ ?>
-  <div class="row justify-content-center sh-row leaf-bg">
-    <div class="col-xl-6 col-sm-7 col-12 sh-col">
-      <div class="pad-v-lg">
-        <?php if (have_posts()) : ?>
-          <?php while (have_posts()) : the_post(); ?>
 
-            <article id="post-<?php the_ID(); ?>">
-              <div class="img alignleft">
-                <?php if ( has_post_thumbnail()) : ?>
-                  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-                    <?php the_post_thumbnail('postslider_thumb'); ?>
-                  </a>
-                <?php endif; ?>
-              </div>
-              <h2 class="page-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'responsive'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
+<div class="row justify-content-center">
+  <div class="col-12 col-lg-7">
+    <?php if (have_posts()) : ?>
 
-              <section class="post-meta">
-                <?php 
-                  $output = '';
-                  $category = get_the_category();
+      <?php while (have_posts()) : the_post(); ?>
 
-                  $output .= '<span><i class="fa fa-calendar blue"></i> ' . get_the_date() . '</span>';
+        <?php get_template_part('components/post'); ?>
 
-                  $output .= '<span><i class="fa fa-user blue"></i> ' . get_the_author() . '</span>';
+      <?php endwhile; ?> 
 
-                  $output .= '<span><i class="fa fa-folder-open"></i> ';
-                  foreach($category as $categories){ 
-                    $category_link = get_category_link($categories->ID);
-                    $output .= '<a href="' . esc_url( get_category_link( $categories->term_id ) ) . '">' . esc_html( $categories->name ) . '</a>';
-                  }
-                  $output .= '</span>';
+      <?php get_template_part('components/navigation-single'); ?>
 
-                  echo $output;
-                ?>
-              </section><!-- end of .post-meta -->
+    <?php else : ?>
 
-              <?php the_content(); ?>
-              <div class="flex-nav">
-                <div class="text-left">
-                  <?php previous_post_link(); ?>
-                </div>
-                <div class="text-right">
-                  <?php next_post_link(); ?> 
-                </div>
-              </div>
+      <?php get_template_part('components/post-not-found'); ?>
 
-              <footer class="article-footer">
-                <div class="post-edit"><?php edit_post_link(__('Edit', 'responsive')); ?></div> 
-              </footer> <!-- end article footer -->
+    <?php endif; ?>
 
-            </article><!-- end of #post-<?php the_ID(); ?> -->
-
-          <?php endwhile; ?> 
-
-          <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-            <nav class="navigation">
-              <div class="previous"><?php next_posts_link( __( '&#8249; Older posts', 'responsive' ) ); ?></div>
-              <div class="next"><?php previous_posts_link( __( 'Newer posts &#8250;', 'responsive' ) ); ?></div>
-            </nav><!-- end of .navigation -->
-          <?php endif; ?>
-
-        <?php else : ?>
-
-          <article id="post-not-found" class="hentry clearfix">
-            <header>
-              <h1 class="title-404"><?php _e('404 &#8212; Fancy meeting you here!', 'responsive'); ?></h1>
-            </header>
-            <section>
-              <p><?php _e('Don&#39;t panic, we&#39;ll get through this together. Let&#39;s explore our options here.', 'responsive'); ?></p>
-            </section>
-            <footer>
-              <h6><?php _e( 'You can return', 'responsive' ); ?> <a href="<?php echo home_url(); ?>/" title="<?php esc_attr_e( 'Home', 'responsive' ); ?>"><?php _e( '&#9166; Home', 'responsive' ); ?></a> <?php _e( 'or search for the page you were looking for', 'responsive' ); ?></h6>
-              <?php get_search_form(); ?>
-            </footer>
-          </article>
-
-        <?php endif; ?>  
-      </div>
-    </div><!-- end of #content -->
-    <?php get_sidebar('right'); ?>
   </div>
-<?php } ?>
+  <div class="col-lg-3">
+    <?php get_sidebar('blog'); ?>
+  </div>
+</div>
+
 <?php get_footer(); ?>

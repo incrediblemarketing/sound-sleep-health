@@ -1,42 +1,25 @@
 {
     "key": "group_5a26d7ef32efa",
-    "title": "Reusable Page Sections",
-    "location": [
-        [
-            {
-                "param": "options_page",
-                "operator": "==",
-                "value": "theme-general-settings"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
-    "description": "",
+    "title": "Reusable Blocks",
     "fields": [
         {
             "key": "field_5a26d86bb5666",
-            "label": "Reusable Page Sections",
-            "name": "reusable_page_sections",
+            "label": "Reusable Blocks",
+            "name": "reusable_blocks",
             "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "hide-label",
                 "id": ""
             },
             "collapsed": "field_5a26d98972d73",
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "Add Reusable Section",
+            "button_label": "Add Reusable Block",
             "sub_fields": [
                 {
                     "key": "field_5a26d98972d73",
@@ -81,5 +64,22 @@
             ]
         }
     ],
-    "modified": 1517419236
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1533758791
 }

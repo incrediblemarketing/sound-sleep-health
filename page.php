@@ -2,7 +2,7 @@
 
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post(); ?>
-    <?php get_template_part('components/sections'); ?>
+    <?php get_template_part('components/blocks'); ?>
   <?php endwhile; ?> 
 <?php endif; ?>  
 

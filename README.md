@@ -3,7 +3,7 @@ WordPress theme for custom builds.
 
 ## Assets
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
-* [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/index.html)
+* [Swiper](http://idangero.us/swiper/api/)
 * [Font Awesome 5 Pro](https://fontawesome.com/)
 * [TweenMax](https://greensock.com/docs/TweenMax)
 * [ScrollMagic](http://scrollmagic.io/)

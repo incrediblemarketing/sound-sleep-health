@@ -3,9 +3,54 @@ Theme Name: incredibletheme
 Theme URL: https://www.incrediblemarketing.com
 Description: An Incredible Theme
 Version: 1.0
-Author: Justin Ward
+Author: Incredible Marketing
 Author URL: https//www.incrediblemarketing.com
-Tags: incredibletheme, incredible marketing, incredible, owl, 
+Tags: incredibletheme, incredible marketing, incredible
 */
 
-@import url('css/style.css');
+/* RESET
+================================================== */
+*:last-child {margin-bottom:0;}
+.site-wrap {overflow:hidden;}
+
+/* SVG
+================================================== */
+svg {fill:currentColor; display:block; max-width:100%;}
+
+/* BACKGROUND VIDEO
+================================================== */
+.bg-video {position:absolute; top:0; left:0; width:100%; height:100%;}
+.bg-video video {position:absolute; top:50%; left:50%; min-width:100%; min-height:100%; width:auto; height:auto; -webkit-transform:translate(-50%, -50%); -ms-transform:translate(-50%, -50%); transform:translate(-50%, -50%);}
+
+/* SLIDER
+================================================== */
+.slider {position:relative; overflow:hidden;}
+.slides {position:relative; z-index:1;}
+.slide {position:relative; overflow:hidden;}
+.slide-content {position:relative; z-index:1;}
+
+/* BLOCK
+================================================== */
+.block {position:relative; overflow:hidden;}
+.block-content {position:relative; overflow:hidden; z-index:1;}
+.block-content > *:not(.bg-video) {position:relative; z-index:1;}
+
+/* SOCIAL ICONS
+================================================== */
+.social-icons {margin:0; padding:0; list-style:none;}
+
+/* HEADER
+================================================== */
+.header .logo svg {display:block; height:50px;}
+.header .menu {margin:0; padding:0; list-style:none;}
+.header .menu > li {display:-webkit-box; display:-ms-flexbox; display:flex;}
+.header .menu > li + li {margin-left:1em;}
+.header .menu > li > a {display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-align:center; -ms-flex-align:center; align-items:center;}
+.header .sub-menu {display:none;}
+/* sticky header */
+.header-sticky {position:fixed; top:0; left:0; width:100%; opacity:0; -webkit-transform:translateY(-100%); -ms-transform:translateY(-100%); transform:translateY(-100%); -webkit-transition:all .2s; -o-transition:all .2s; transition:all .2s;}
+.header-sticky.visible {opacity:1; -webkit-transform:translateY(0); -ms-transform:translateY(0); transform:translateY(0);}
+
+/* FOOTER
+================================================== */
+.im-logo {height:1em; display:inline-block; margin-top:-.1em; fill:currentColor; vertical-align:middle;}
