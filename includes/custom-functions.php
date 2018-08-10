@@ -57,9 +57,9 @@ function get_child_page_menu($top_level_id = null, $current_page_id = null) {
 
 function get_background_video($bg_object) {
   ob_start();
-  $bg_image = $bg_object['image']['sizes']['large'];
-  $has_video_background = $bg_object['video_background'];
-  $video_object = $bg_object['video'];
+  $bg_image = isset($bg_object['image']['sizes']['large']) ? $bg_object['image']['sizes']['large'] : '';
+  $has_video_background = isset($bg_object['video_background']) ? $bg_object['video_background'] : '';
+  $video_object = isset($bg_object['video']) ? $bg_object['video'] : null;
   ?>
     <?php if ($has_video_background) : ?>
       <?php if ($video_object['mp4'] || $video_object['ogv'] || $video_object['webm'] ) : ?>
@@ -124,24 +124,108 @@ function get_block_content_class($block, $defaults) {
 function get_block_video($block, $defaults, $element = 'block') {
   $default_method = isset($defaults['method']) ? $defaults['method'] : 0;
   $default_source = isset($defaults['im_dynamic_element_default_source']) ? $defaults['im_dynamic_element_default_source'] : 0;
+  $this_bg_object = isset($block['background']) ? $block['background'] : null;
+  $default_bg_object = array();
+  $result_bg_object = array();
 
-  $bg_object = $block['background'];
+  if ('global' == $default_source) {
+    $default_bg_object = get_field('global_block_defaults', 'options')[$element]['background'];
+  } else {
+    if (have_rows('custom_block_defaults', 'options')) {
+      while (have_rows('custom_block_defaults', 'options')) {
+        the_row();
+        if ($default_source == get_sub_field('id')) {
+          $default_bg_object = get_sub_field($element)['background'];
+        }
+      }
+    }
+  }
+
   switch($default_method) {
     case 'use':
-      break;
-    case 'merge':
+      $result_bg_object = $default_bg_object;
       break;
     default:
+      $result_bg_object = $this_bg_object;
   }
 
-  if (!$default_method) {
-    return get_background_video($bg_object);
-  }
+  return get_background_video($result_bg_object);
 }
 
 function get_block_content_video($block, $defaults) {
   return get_block_video($block, $defaults, 'block_content');
 }
+
+function get_block_bg_color($block, $defaults, $element = 'block') {
+  $default_method = isset($defaults['method']) ? $defaults['method'] : 0;
+  $default_source = isset($defaults['im_dynamic_element_default_source']) ? $defaults['im_dynamic_element_default_source'] : 0;
+  $this_bg_color = isset($block['background']['color']) ? $block['background']['color'] : null;
+  $default_bg_color = '';
+  $result_bg_color = '';
+
+  if ('global' == $default_source) {
+    $default_bg_color = get_field('global_block_defaults', 'options')[$element]['background']['color'];
+  } else {
+    if (have_rows('custom_block_defaults', 'options')) {
+      while (have_rows('custom_block_defaults', 'options')) {
+        the_row();
+        if ($default_source == get_sub_field('id')) {
+          $default_bg_color = get_sub_field($element)['background']['color'];
+        }
+      }
+    }
+  }
+
+  switch($default_method) {
+    case 'use':
+      $result_bg_color = $default_bg_color;
+      break;
+    default:
+      $result_bg_color = $this_bg_color;
+  }
+
+  return $result_bg_color;
+}
+
+function get_block_content_bg_color($block, $defaults) {
+  return get_block_bg_color($block, $defaults, 'block_content');
+}
+
+function get_block_bg_image($block, $defaults, $element = 'block') {
+  $default_method = isset($defaults['method']) ? $defaults['method'] : 0;
+  $default_source = isset($defaults['im_dynamic_element_default_source']) ? $defaults['im_dynamic_element_default_source'] : 0;
+  $this_bg_image = isset($block['background']['image']) ? $block['background']['image'] : null;
+  $default_bg_image = '';
+  $result_bg_image = '';
+
+  if ('global' == $default_source) {
+    $default_bg_image = get_field('global_block_defaults', 'options')[$element]['background']['image'];
+  } else {
+    if (have_rows('custom_block_defaults', 'options')) {
+      while (have_rows('custom_block_defaults', 'options')) {
+        the_row();
+        if ($default_source == get_sub_field('id')) {
+          $default_bg_image = get_sub_field($element)['background']['image'];
+        }
+      }
+    }
+  }
+
+  switch($default_method) {
+    case 'use':
+      $result_bg_image = $default_bg_image;
+      break;
+    default:
+      $result_bg_image = $this_bg_image;
+  }
+
+  return $result_bg_image;
+}
+
+function get_block_content_bg_image($block, $defaults) {
+  return get_block_bg_image($block, $defaults, 'block_content');
+}
+
 
 function enqueue_slider_assets() {
   wp_enqueue_style('swiper');

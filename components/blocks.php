@@ -12,9 +12,19 @@ if (have_rows('blocks')) :
 
       $block_class = get_block_class($block, $defaults);
       $block_content_class = get_block_content_class($block, $defaults);
+      $block_bg_color = get_block_bg_color($block, $defaults);
+      $block_content_bg_color = get_block_content_bg_color($block_content, $defaults);
+      $block_bg_image = get_block_bg_image($block, $defaults)['sizes']['large'];
+      $block_content_bg_image = get_block_content_bg_image($block_content, $defaults)['sizes']['large'];
 
-      echo '<div class="block block-' . $layout . ' ' . $block_class . '">';
-        echo '<div class="block-content ' . $block_content_class . '">';
+      echo '<div class="block block-' . $layout . ' ' . $block_class . '"';
+      echo $block_bg_color ? ' data-bg-color="' . $block_bg_color . '"' : '';
+      echo $block_bg_image ? ' data-bg-image="' . $block_bg_image . '"' : '';
+      echo '>';
+        echo '<div class="block-content ' . $block_content_class . '"';
+        echo $block_content_bg_color ? ' data-bg-color="' . $block_content_bg_color . '"' : '';
+        echo $block_content_bg_image ? ' data-bg-image="' . $block_content_bg_image . '"' : '';
+        echo '>';
     }
 
     echo get_template_part('components/blocks/' . $layout );

@@ -8,27 +8,7 @@ function sliders() {
 
     var sliders = new im_sliders();
 
-    sliders.type('static_content', {
-      slidesPerView:2,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-    });
-
-    sliders.type('recent_posts', {
-      slidesPerView:3,
-      loop:true
-    });
-
-    sliders.post_type('page', {
-      slidesPerView:2,
-      loop:true
-    });
-
-    sliders.id('slider-5b5b3dfe41cb4', {
-      slidesPerView:4
-    });
+    // define slider options here
 
     sliders.init();
   }
