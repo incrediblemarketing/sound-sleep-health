@@ -1,10 +1,10 @@
 {
     "key": "group_5937796cc843f",
-    "title": "Options Panel",
+    "title": "Incredible Options",
     "fields": [
         {
             "key": "field_59378557d6d54",
-            "label": "Logo Options",
+            "label": "Favicon",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -17,162 +17,6 @@
             },
             "placement": "left",
             "endpoint": 0
-        },
-        {
-            "key": "field_5963f51358cbf",
-            "label": "Logo Type",
-            "name": "logo_type",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Text": "Text",
-                "Image": "Image"
-            },
-            "allow_null": 1,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value"
-        },
-        {
-            "key": "field_5963f935ea655",
-            "label": "Logo Text",
-            "name": "logo_text",
-            "type": "text",
-            "instructions": "On clicking logo, user will be redirected to this mentioned url.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5963f51358cbf",
-                        "operator": "==",
-                        "value": "Text"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5937856bd6d55",
-            "label": "Logo URL",
-            "name": "logo_url",
-            "type": "text",
-            "instructions": "On clicking logo, user will be redirected to this mentioned url.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_59377a9efaa47",
-            "label": "Logo",
-            "name": "logo_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5963f51358cbf",
-                        "operator": "==",
-                        "value": "Image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_593785d8d6d56",
-            "label": "Logo Height",
-            "name": "logo_height",
-            "type": "text",
-            "instructions": "Set the height of the logo in px.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5963f51358cbf",
-                        "operator": "==",
-                        "value": "Image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "alignleft",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "px",
-            "maxlength": ""
-        },
-        {
-            "key": "field_59378652d6d57",
-            "label": "Logo Width",
-            "name": "logo_width",
-            "type": "text",
-            "instructions": "Set the width of the logo in px.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5963f51358cbf",
-                        "operator": "==",
-                        "value": "Image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "alignleft",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "px",
-            "maxlength": ""
         },
         {
             "key": "field_593787728638c",
@@ -247,43 +91,8 @@
             "mime_types": ""
         },
         {
-            "key": "field_59377a4ffaa46",
-            "label": "Header Options",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_59379277db692",
-            "label": "Social Icons",
-            "name": "header_social_icons",
-            "type": "true_false",
-            "instructions": "Show Social Icons in the Header",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_59821b7540abf",
-            "label": "Default Page Options",
+            "label": "Page Defaults",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -299,7 +108,7 @@
         },
         {
             "key": "field_5a1362ce854d4",
-            "label": "Default Header Image",
+            "label": "Header Image",
             "name": "header_image",
             "type": "image",
             "instructions": "",
@@ -322,10 +131,10 @@
             "mime_types": ""
         },
         {
-            "key": "field_59821bd340ac0",
-            "label": "Background Color",
-            "name": "background_color",
-            "type": "color_picker",
+            "key": "field_5b69c1c245d56",
+            "label": "Block Defaults",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -334,13 +143,14 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": ""
+            "placement": "left",
+            "endpoint": 0
         },
         {
-            "key": "field_59821c0740ac1",
-            "label": "Background Image",
-            "name": "background_image",
-            "type": "image",
+            "key": "field_5b6b10aeea420",
+            "label": "Global",
+            "name": "global_block_defaults",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -349,22 +159,91 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5b6b10c4ea421",
+                    "label": "<code>.block<\/code>",
+                    "name": "block",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b6b10dbea422",
+                            "label": "Element Fields",
+                            "name": "element_fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b69feff3028d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5b6b10f4ea423",
+                    "label": "<code>.block-content<\/code>",
+                    "name": "block_content",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b6b110aea424",
+                            "label": "Element Fields",
+                            "name": "element_fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b69feff3028d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "key": "field_59821c3140ac2",
-            "label": "Font Color",
-            "name": "font_color",
-            "type": "color_picker",
+            "key": "field_5b6a0d051c9bc",
+            "label": "Custom",
+            "name": "custom_block_defaults",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -373,176 +252,122 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": ""
-        },
-        {
-            "key": "field_59821c5240ac3",
-            "label": "Font Size",
-            "name": "font_size",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "10px": "10px",
-                "11px": "11px",
-                "12px": "12px",
-                "13px": "13px",
-                "14px": "14px",
-                "15px": "15px",
-                "16px": "16px",
-                "17px": "17px",
-                "18px": "18px",
-                "19px": "19px",
-                "20px": "20px",
-                "21px": "21px",
-                "22px": "22px",
-                "23px": "23px",
-                "24px": "24px",
-                "25px": "25px",
-                "26px": "26px",
-                "27px": "27px",
-                "28px": "28px",
-                "29px": "29px",
-                "30px": "30px",
-                "31px": "31px",
-                "32px": "32px",
-                "33px": "33px",
-                "34px": "34px",
-                "35px": "35px",
-                "36px": "36px",
-                "37px": "37px",
-                "38px": "38px",
-                "39px": "39px",
-                "40px": "40px",
-                "41px": "41px",
-                "42px": "42px",
-                "43px": "43px",
-                "44px": "44px",
-                "45px": "45px",
-                "46px": "46px",
-                "47px": "47px",
-                "48px": "48px",
-                "49px": "49px",
-                "50px": "50px",
-                "51px": "51px",
-                "52px": "52px",
-                "53px": "53px",
-                "54px": "54px",
-                "55px": "55px",
-                "56px": "56px",
-                "57px": "57px",
-                "58px": "58px",
-                "59px": "59px",
-                "60px": "60px"
-            },
-            "default_value": [],
-            "allow_null": 1,
-            "multiple": 0,
-            "ui": 1,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
-        },
-        {
-            "key": "field_59821c8340ac4",
-            "label": "Text Align",
-            "name": "text_align",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "text-left": "Left",
-                "text-center": "Center",
-                "text-right": "Right"
-            },
-            "default_value": [],
-            "allow_null": 1,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
-        },
-        {
-            "key": "field_59821cbf40ac5",
-            "label": "Row CSS",
-            "name": "row_css",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_59821cd540ac6",
-            "label": "Column CSS",
-            "name": "column_1_css",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_59821cf840ac7",
-            "label": "Padding",
-            "name": "padding",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "pad-xs": "X-Small",
-                "pad-sm": "Small",
-                "pad-md": "Medium",
-                "pad-lg": "Large",
-                "pad-v-xs": "X-Small (Vertical Only)",
-                "pad-v-sm": "Small (Vertical Only)",
-                "pad-v-md": "Medium (Vertical Only)",
-                "pad-v-lg": "Large (Vertical Only)"
-            },
-            "default_value": [],
-            "allow_null": 1,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
+            "collapsed": "field_5b6a0d2c1c9bd",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Block Defaults",
+            "sub_fields": [
+                {
+                    "key": "field_5b6a0d2c1c9bd",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "hide-label",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Label",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b6b0dc3f035c",
+                    "label": "<code>.block<\/code>",
+                    "name": "block",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b6b0dd6f035d",
+                            "label": "Element Fields",
+                            "name": "element_fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b69feff3028d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5b6b0df3f035e",
+                    "label": "<code>.block-content<\/code>",
+                    "name": "block_content",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b6b0e05f035f",
+                            "label": "Element Fields",
+                            "name": "element_fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b69feff3028d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5b6a0d9d0bafc",
+                    "label": "Id",
+                    "name": "id",
+                    "type": "unique_id",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                }
+            ]
         },
         {
             "key": "field_59377f4a051a7",
@@ -578,48 +403,6 @@
             "prepend": "©",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_593792b8db693",
-            "label": "Social Icons",
-            "name": "footer_social_icons",
-            "type": "true_false",
-            "instructions": "Show Social Icons in the Footer",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_59379816a2b3e",
-            "label": "Menu",
-            "name": "footer_menu",
-            "type": "checkbox",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Show Footer Menu": "Show Footer Menu"
-            },
-            "allow_custom": 0,
-            "save_custom": 0,
-            "default_value": [],
-            "layout": "horizontal",
-            "toggle": 0,
-            "return_format": "value"
         },
         {
             "key": "field_593789f4da250",
@@ -661,7 +444,7 @@
                     "label": "Icon",
                     "name": "social_icon",
                     "type": "select",
-                    "instructions": "Copy the FontAwesome icon class above (fa-facebook)",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -670,18 +453,18 @@
                         "id": ""
                     },
                     "choices": {
-                        "facebook-f": "Facebook",
+                        "facebook": "Facebook",
                         "instagram": "Instagram",
-                        "pinterest-p": "Pinterest",
+                        "pinterest": "Pinterest",
                         "twitter": "Twitter",
                         "linkedin": "LinkedIn",
                         "youtube": "YouTube",
                         "vimeo": "Vimeo",
-                        "google-plus-g": "Google Plus",
+                        "googleplus": "Google Plus",
                         "yelp": "Yelp",
-                        "phone": "Phone Number",
-                        "envelope-o": "Email",
-                        "map-marker": "Map"
+                        "call": "Call",
+                        "email": "Email",
+                        "location": "Location"
                     },
                     "default_value": [],
                     "allow_null": 1,
@@ -696,7 +479,7 @@
                     "label": "Url",
                     "name": "social_url",
                     "type": "text",
-                    "instructions": "Copy the full social url above.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -783,69 +566,12 @@
             "placeholder": ""
         },
         {
-            "key": "field_598252a78e1dd",
-            "label": "Map Latitude",
-            "name": "map_latitude",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_598252d08e1de",
-            "label": "Map Longitude",
-            "name": "map_longitude",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_598249f126a5e",
-            "label": "Business Email Address",
-            "name": "business_email_address",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5982499626a5c",
             "label": "Business Phone Display",
             "name": "business_phone_display",
             "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -864,7 +590,7 @@
             "name": "business_phone_url",
             "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -887,13 +613,13 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": -1,
     "position": "normal",
     "style": "default",
-    "label_placement": "left",
+    "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528318837
+    "modified": 1535487543
 }
