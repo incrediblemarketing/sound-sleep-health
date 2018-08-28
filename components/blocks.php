@@ -6,18 +6,19 @@ if (have_rows('blocks')) :
     $wrap_as_block = get_sub_field('wrap_as_block');
     $defaults = get_sub_field('defaults');
     $block = get_sub_field('block');
+    $block_id = get_sub_field('block_id');
     $block_content = get_sub_field('block_content');
 
     if ($wrap_as_block) {
 
       $block_class = get_block_class($block, $defaults);
-      $block_content_class = get_block_content_class($block, $defaults);
+      $block_content_class = get_block_content_class($block_content, $defaults);
       $block_bg_color = get_block_bg_color($block, $defaults);
       $block_content_bg_color = get_block_content_bg_color($block_content, $defaults);
       $block_bg_image = get_block_bg_image($block, $defaults)['sizes']['large'];
       $block_content_bg_image = get_block_content_bg_image($block_content, $defaults)['sizes']['large'];
 
-      echo '<div class="block block-' . $layout . ' ' . $block_class . '"';
+      echo '<div id="block-' . $block_id . '" class="block block-' . $layout . ' ' . $block_class . '"';
       echo $block_bg_color ? ' data-bg-color="' . $block_bg_color . '"' : '';
       echo $block_bg_image ? ' data-bg-image="' . $block_bg_image . '"' : '';
       echo '>';
