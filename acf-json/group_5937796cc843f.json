@@ -370,22 +370,6 @@
             ]
         },
         {
-            "key": "field_5b6a0d7a0bafb",
-            "label": "Default Elements",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
             "key": "field_59377f4a051a7",
             "label": "Footer Options",
             "name": "",
@@ -637,5 +621,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1533759943
+    "modified": 1535487543
 }
