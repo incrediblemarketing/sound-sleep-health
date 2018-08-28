@@ -1,17 +1,17 @@
 <?php
   $social_icon_class_map = array(
     'facebook'   => 'fab fa-facebook-f',
-    'instagram'  => 'fas fa-instagram',
-    'pinterest'  => 'fas fa-pinterest-p',
-    'twitter'    => 'fas fa-twitter',
-    'linkedin'   => 'fab fa-linkedin',
-    'youtube'    => 'fas fa-youtube',
-    'vimeo'      => 'fas fa-vimeo',
-    'googleplus' => 'fas fa-google-plus-g',
-    'yelp'       => 'fas fa-yelp',
+    'instagram'  => 'fab fa-instagram',
+    'pinterest'  => 'fab fa-pinterest-p',
+    'twitter'    => 'fab fa-twitter',
+    'linkedin'   => 'fab fa-linkedin-in',
+    'youtube'    => 'fab fa-youtube',
+    'vimeo'      => 'fab fa-vimeo-v',
+    'googleplus' => 'fab fa-google-plus-g',
+    'yelp'       => 'fab fa-yelp',
     'call'       => 'fas fa-phone',
-    'email'      => 'fas fa-envelope-o',
-    'location'   => 'fas fa-map-marker',
+    'email'      => 'fas fa-envelope',
+    'location'   => 'fas fa-map-marker-alt',
   );
 ?>
 
