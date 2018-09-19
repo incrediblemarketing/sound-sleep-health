@@ -10,8 +10,8 @@
 
     <nav class="d-flex align-items-center navigation navigation-loop">
 
-      <?php echo $newerLink; ?>
       <?php echo $olderLink; ?>
+      <?php echo $newerLink; ?>
 
     </nav>
 

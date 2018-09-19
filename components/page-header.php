@@ -2,6 +2,11 @@
 
   $background_image = get_field('page_header_background_image') ?: get_field('header_image', 'options');
 
+  if (is_home()) {
+    $page_for_posts = get_option( 'page_for_posts' );
+    $background_image = get_field('page_header_background_image', $page_for_posts) ?: get_field('header_image', 'options');
+  }
+
 ?>
 
 <header
