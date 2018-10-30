@@ -1,4 +1,4 @@
 <?php
 
-  get_template_part('components/post-preview');
+	get_template_part('components/post-preview');
 

@@ -1,3 +1,3 @@
 <?php
 
-  echo $slide_content;
+	echo $slide_content;

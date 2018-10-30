@@ -2,17 +2,17 @@
 
 // excerpt_more
 function im_excerpt_more($more) {
-  return '&hellip;';
+	return '&hellip;';
 }
 add_filter('excerpt_more', 'im_excerpt_more');
 
 function im_previous_posts_link_attributes($attr) {
-  return 'class="ml-auto"';
+	return 'class="ml-auto"';
 }
 add_filter('previous_posts_link_attributes', 'im_previous_posts_link_attributes');
 
 function im_previous_post_link_attributes($output) {
-  $attr = 'class="ml-auto"';
-  return str_replace('<a href=', '<a ' . $attr . ' href=', $output);
+	$attr = 'class="ml-auto"';
+	return str_replace('<a href=', '<a ' . $attr . ' href=', $output);
 }
 add_filter('previous_post_link', 'im_previous_post_link_attributes');
