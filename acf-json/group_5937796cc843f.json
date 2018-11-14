@@ -3,94 +3,6 @@
     "title": "Incredible Options",
     "fields": [
         {
-            "key": "field_59378557d6d54",
-            "label": "Favicon",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_593787728638c",
-            "label": "Favicon 16x16",
-            "name": "favicon_16x16",
-            "type": "image",
-            "instructions": "Image that will be used as favicon (16px x 16px).",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": 16,
-            "min_height": 16,
-            "min_size": "",
-            "max_width": 16,
-            "max_height": 16,
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_596939c2e3858",
-            "label": "Favicon 32x32",
-            "name": "favicon_32x32",
-            "type": "image",
-            "instructions": "Image that will be used as favicon (32px x 32px).",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": 32,
-            "min_height": 32,
-            "min_size": "",
-            "max_width": 32,
-            "max_height": 32,
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_59693a11e3859",
-            "label": "Apple Touch 180x180",
-            "name": "apple_touch_180x180",
-            "type": "image",
-            "instructions": "Image that will be used as favicon (180px x 180px).",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": 180,
-            "max_height": 180,
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_59821b7540abf",
             "label": "Page Defaults",
             "name": "",
@@ -621,5 +533,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1535487543
+    "modified": 1542229960
 }
