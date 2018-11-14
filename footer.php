@@ -21,7 +21,7 @@
 				<?php echo $address2; ?></a></p>
 		<?php endif; ?>
 
-		<p>&copy; <?php echo date('Y'); ?> <?php echo $copyright ?: get_bloginfo(); ?></a></p>
+		<p>&copy; <?php echo date('Y'); ?> <?php echo $copyright ?: get_bloginfo(); ?></p>
 
 		<p>Digital Marketing By <a href="http://www.incrediblemarketing.com/" target="_blank"><?php get_template_part('components/svg/incredible-marketing'); ?>Incredible Marketing</a></p>
 
