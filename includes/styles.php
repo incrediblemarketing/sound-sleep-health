@@ -1,6 +1,7 @@
 <?php
 
 function im_register_styles() {
+    wp_register_style('main', get_template_directory_uri() . '/assets/dist/css/main.css');
 	wp_register_style('tetherstyle', get_template_directory_uri() . '/assets/vendor/tether-1.3.3/dist/css/tether.min.css');
 	wp_register_style('bootstrapstyle', get_template_directory_uri() . '/assets/vendor/Bootstrap/css/bootstrap.min.css');
 	wp_register_style('bootstrapextensions', get_template_directory_uri() . '/assets/css/bootstrap-extensions.css');
@@ -11,6 +12,7 @@ function im_register_styles() {
 add_action('wp_enqueue_scripts', 'im_register_styles');
 
 function im_enqueue_styles() {
+    wp_enqueue_style( 'main');
 	wp_enqueue_style('tetherstyle');
 	wp_enqueue_style('bootstrapstyle');
 	wp_enqueue_style('bootstrapextensions');

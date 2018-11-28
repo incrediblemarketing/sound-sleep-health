@@ -1,0 +1,7 @@
+{
+  "name": "wordpress-theme",
+  "version": "1.0.0",
+  "devDependencies": {
+    "sass-mq": "~5.0.0"
+  }
+}
