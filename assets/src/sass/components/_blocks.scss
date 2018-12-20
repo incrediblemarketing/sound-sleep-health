@@ -1,0 +1,11 @@
+.block {
+  position:relative;
+}
+.block-content {
+  position:relative;
+  z-index:1;
+  > *:not(.bg-video) {
+    position:relative;
+    z-index:1;
+  }
+}

@@ -230,5 +230,4 @@ function get_block_content_bg_image($block, $defaults) {
 function enqueue_slider_assets() {
 	wp_enqueue_style('swiper');
 	wp_enqueue_script('swiper');
-	wp_enqueue_script('im_sliders');
 }
