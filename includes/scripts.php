@@ -5,7 +5,7 @@ function im_register_scripts() {
 	wp_register_script('swiper', get_template_directory_uri() . '/assets/dist/vendor/swiper/js/swiper.min.js','','',true);
 	wp_register_script('tweenmax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js','','',true);
 	wp_register_script('scrollmagic', get_template_directory_uri() . '/assets/dist/vendor/scrollmagic/ScrollMagic.min.js','','',true);
-	wp_register_script('scrollanimation', get_template_directory_uri() . '/assets/dist/vendor/scrollmagic/plugins/animation.gsap.js','','',true);
+	wp_register_script('scrollanimation', get_template_directory_uri() . '/assets/dist/vendor/scrollmagic/plugins/animation.gsap.min.js','','',true);
 	wp_register_script('scrollindicator', get_template_directory_uri() . '/assets/dist/vendor/scrollmagic/plugins/debug.addIndicators.min.js','','',true);
 	wp_register_script('modernizr', get_template_directory_uri() . '/assets/dist/vendor/modernizr-3.0.0.min.js' );
 	wp_register_script('plugins', get_template_directory_uri() . '/assets/dist/js/plugins.min.js', array('jquery'), false );
