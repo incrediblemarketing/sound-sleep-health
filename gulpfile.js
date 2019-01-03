@@ -36,7 +36,7 @@ gulp.task('sass', function() {
     }),
     cssnano()
   ]))
-  .pipe(gulp.dest('./assets/css/'))
+  .pipe(gulp.dest('./assets/dist/css/'))
   .pipe(browserSync.reload({
         stream:true
     }));
