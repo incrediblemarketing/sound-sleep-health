@@ -128,7 +128,8 @@ gulp.task('pluginsJs', function() {
         }))
         .pipe(uglify())
         .pipe(gulp.dest('./assets/dist/js/'))
-        .pipe(notify({ message: 'Plugin scripts task complete', onLast: true }));
+        .pipe(notify({ message: 'Plugin scripts task complete', onLast: true }))
+        .pipe(browserSync.stream({once: true}));
 });
 
 /**
@@ -147,7 +148,8 @@ gulp.task('scriptsJs', function() {
         }))
         .pipe(uglify())
         .pipe(gulp.dest('./assets/dist/js/'))
-        .pipe(notify({ message: 'Main scripts task complete', onLast: true }));
+        .pipe(notify({ message: 'Main scripts task complete', onLast: true }))
+        .pipe(browserSync.stream({once: true}));
 });
 
 /**
@@ -268,9 +270,6 @@ gulp.task('copy', function() {
    gulp.task('watch', function() {
         var files = [
                         './**/*.php',
-                        './**/*.js',
-                        './**/*.css',
-                        './**/*.html',
                         './**/*.{png,jpg,gif}'
                     ];
         browserSync.init(files, {
@@ -291,9 +290,9 @@ gulp.task('copy', function() {
 
 
         });
-        gulp.watch('./assets/src/img/raw/**/*', ['images']);
+        gulp.watch('./assets/src/img/raw/**/*.{png,jpg,gif}', ['images']);
         gulp.watch('./assets/src/sass/**/*.scss', ['styles']);
-        gulp.watch('./assets/src/js/**/*.js', ['scriptsJs', 'pluginsJs', browserSync.reload]);
+        gulp.watch('./assets/src/js/**/*.js', ['scriptsJs', 'pluginsJs']);
 
    });
 
