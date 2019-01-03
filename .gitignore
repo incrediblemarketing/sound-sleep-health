@@ -9,7 +9,8 @@
 ehthumbs.db
 Thumbs.db
 assets/dist/*
-
+*.zip
+buildtheme/*
 # Node #
 ######################
 
