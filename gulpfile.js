@@ -22,7 +22,7 @@ var gulp          = require('gulp'),
 
 // Sass
 gulp.task('sass', function() {
-  return gulp.src('./assets/src/sass/style.scss')
+  return gulp.src('./assets/src/sass/main.scss')
   .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
   .pipe(sass({
     includePaths: [
@@ -36,7 +36,10 @@ gulp.task('sass', function() {
     }),
     cssnano()
   ]))
-  .pipe(gulp.dest('./'))
+  .pipe(gulp.dest('./assets/css/'))
+  .pipe(browserSync.reload({
+        stream:true
+    }));
 });
 
 // JavaScript Plugins
@@ -90,12 +93,12 @@ gulp.task('copy', function() {
 // Watch
 gulp.task('watch', function() {
   browserSync.init({
-    files: ['./**/*.php'],
+    files: ['./**/*.php', './assets/src/js/**/*.js'],
     proxy: 'http://local.gulptest.com/',
     tunnel: 'mylocaltest',
   });
-  gulp.watch('./assets/src/sass/**/*.scss', ['sass', reload]);
-  gulp.watch(['./assets/src/js/**/*.js'], ['js', 'js-main', reload]);
+  gulp.watch('./assets/src/sass/**/*.scss', ['sass']);
+  // gulp.watch(['./assets/src/js/**/*.js'], ['js', 'js-main', reload]);
   gulp.watch('./assets/src/img/*', ['images', reload]);
 });
 

@@ -11,6 +11,15 @@ $black                                   : #000000;
 $white                                   : #ffffff;
 $primary                                 : #a71478;
 
+$off-white                               : #f6f6f6;
+$off-black                               : #222222;
+$mercury                                 : #e6e6e6;
+$alto                                    : #dbdbdb;
+$gray                                    : #888888;
+$charcoal                                : #333332;
+$pomegranate                             : #ee3228; // red
+$endeavour                               : #0065b2; // blue
+
 // Social Networks
 // ----------------------------------------------------------------------
 
@@ -32,10 +41,20 @@ $twitter                                 : #39a9e0;
 // ----------------------------------------------------------------------
 
 $success                                 : #659f13;
+$success-lt                              : #f2fae3;
 $error                                   : #d85030;
+$error-lt                                : #fff1f0;
 $warning                                 : #e28327;
+$warning-lt                              : #fffceb;
+
+$font-color                              : #000000;
 
 // Selection
 // ----------------------------------------------------------------------
 $selection-highlight-background          : $primary;
 $selection-highlight-color               : white;
+
+
+$font-family                             : 'Open Sans', sans-serif;
+$font-family-secondary                   : 'trajan-pro-3', serif;
+$font-size                               : 16px;
