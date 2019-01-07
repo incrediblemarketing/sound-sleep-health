@@ -45,9 +45,9 @@ At this point you should have `incredibletheme` installed with all custom field 
 ### Using Gulp
 The Gulp tools in this build allow you to use sass, imagemin, js min/concat and js/css linters for errors. CSS media queries are also combinded for shorter code. Follow the steps below to get started!
 
-1. Install Node.js and Gulp
-2. cd to your project and run "npm install".
-3. Go to line 92 and 93 in gulpfile.js and update those lines to reflect your local setup.
+1. Install [Node.js](https://nodejs.org/en/) and [Gulp](https://gulpjs.com/)
+2. cd to your project and run `npm install`.
+3. Go to line 13 in gulpfile.js and update to reflect your local setup.
 4. Run "gulp" from your project root.
 
 
