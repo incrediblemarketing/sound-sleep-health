@@ -10,7 +10,7 @@ function shortcode_reusable_block($atts) {
 		while ( have_rows('reusable_blocks', 'options') ) : the_row();
 			$id = get_sub_field('id');
 			if ($a['id'] == $id) {
-				echo get_template_part('components/sections');
+				echo get_template_part('components/blocks');
 			}
 		endwhile;
 	endif;

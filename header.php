@@ -18,8 +18,8 @@
 
 	<div class="site-wrap">
 	
-		<?php get_template_part('components/header-static'); ?>
-		<?php get_template_part('components/header-sticky'); ?>
+		<?php get_template_part('components/site-nav-static'); ?>
+		<?php get_template_part('components/site-nav-sticky'); ?>
 
 		<?php if (!is_single()) : ?>
 			<?php get_template_part('components/page-header'); ?>

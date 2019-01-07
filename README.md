@@ -41,6 +41,16 @@ To avoid this, **sync the existing field groups before changing any fields**:
 
 At this point you should have `incredibletheme` installed with all custom field groups imported and synced. Moving forward you should be able to edit anything you want without issue.
 
+
+### Using Gulp
+The Gulp tools in this build allow you to use sass, imagemin, js min/concat and js/css linters for errors. CSS media queries are also combinded for shorter code. Follow the steps below to get started!
+
+1. Install [Node.js](https://nodejs.org/en/) and [Gulp](https://gulpjs.com/)
+2. cd to your project and run `npm install`.
+3. Go to line 13 in gulpfile.js and update to reflect your local setup.
+4. Run "gulp" from your project root.
+
+
 ## Plugin resources
 
 Licenses, addons, etc.
