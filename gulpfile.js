@@ -3,7 +3,6 @@
  * Gulpfile setup
  *
  * @since 1.0.0
- * @authors Ahmad Awais, @digisavvy, @desaiuditd, @jb510, @dmassiani and @Maxlopez
  * @package neat
  */
 
