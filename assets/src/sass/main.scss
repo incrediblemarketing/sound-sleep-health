@@ -9,14 +9,14 @@
 // ==========================================================================
 
 @import "vendor/bootstrap/bootstrap-variables",
-		"vendor/bootstrap/bootstrap";
+        "vendor/bootstrap/bootstrap";
 
 // ==========================================================================
 // Settings
 // ==========================================================================
 
 @import "core/mq-breakpoints",
-		"core/functions",
+        "core/functions",
         "core/mixins";
 
 // ==========================================================================
@@ -30,8 +30,8 @@
 // ==========================================================================
 
 @import "base/helpers",
-		"base/base",
-		"base/typography";
+        "base/base",
+        "base/typography";
 
 // ==========================================================================
 // Plugins
@@ -46,5 +46,5 @@
 
 @import "components/blocks",
         "components/social-icons",
-		"components/site-nav",
+        "components/site-nav",
         "components/footer";
