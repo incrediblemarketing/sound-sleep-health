@@ -21,12 +21,12 @@
     .gform_wrapper input[type=number],
     .gform_wrapper input[type=password] {
         padding: 5px;
-        @include rem('font-size', 16px);
+        font-size:1rem;
     }
 
     .gform_wrapper textarea {
         padding: 5px;
-        @include rem('font-size', 16px);
+        font-size:1rem;
     }
 
     .gform_wrapper .top_label input.large,
@@ -87,7 +87,7 @@
     }
 
     .gform_wrapper .validation_message {
-        color: $charcoal;
+        color: $font-color;
     }
 
     .gform_wrapper .gform_footer {
