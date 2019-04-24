@@ -1,0 +1,15 @@
+@function column_width($columns:1, $gutters:0, $container_fluid_padding:15px) {
+  @if $container_fluid_padding == 15px {
+    @if $gutters != 0 {
+      @return calc((#{(100vw / 12)} * #{$columns}) + #{$gutters * 30px});
+    } @else {
+      @return calc(#{(100vw / 12)} * #{$columns});
+    }
+  } @else {
+    @if $gutters != 0 {
+      @return calc((((100vw - #{$container_fluid_padding}) / 12) * #{$columns}) + #{$gutters * 30px});
+    } @else {
+      @return calc(((100vw - #{$container_fluid_padding}) / 12) * #{$columns});
+    }
+  }
+}
