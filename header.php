@@ -14,12 +14,12 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
+
 <body <?php body_class(); ?>>
 
 	<div class="site-wrap">
-	
+
 		<?php get_template_part('components/site-nav-static'); ?>
-		<?php get_template_part('components/site-nav-sticky'); ?>
 
 		<?php if (!is_single()) : ?>
 			<?php get_template_part('components/page-header'); ?>
