@@ -56,5 +56,5 @@ if (!function_exists('im_register_team_members')) {
 		);
 		register_post_type('team_members', $args);
 	}
-	add_action('init', 'im_register_team_memberss', 0);
+	add_action('init', 'im_register_team_members', 0);
 }
