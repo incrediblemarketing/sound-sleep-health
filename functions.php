@@ -53,6 +53,7 @@ require_once get_template_directory() . '/includes/shortcodes/call_number.php';
 require_once get_template_directory() . '/includes/shortcodes/reusable_block.php';
 require_once get_template_directory() . '/includes/shortcodes/sidebar.php';
 require_once get_template_directory() . '/includes/shortcodes/child_pages.php';
+require_once get_template_directory() . '/includes/shortcodes/staff.php';
 
 // PLUGINS
 // ==================================================
