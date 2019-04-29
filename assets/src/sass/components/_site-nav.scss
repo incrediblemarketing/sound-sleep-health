@@ -2,6 +2,12 @@
 // SITE NAV
 // ==========================================================================
 .site-nav {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+	opacity: 0;
+
     .logo {
         svg {
             display: block;
@@ -30,29 +36,14 @@
         .sub-menu {
             display: none;
         }
-    }
-}
+	}
 
-.site-nav-sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: all .2s;
+	// offset if WP admin bar is present
+	.admin-bar & {
+		top: 46px;
 
-    &.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    // offset if WP admin bar is present
-    .admin-bar & {
-        top: 46px;
-
-        @media (min-width: 783px) {
-            top: 32px;
-        }
-    }
+		@media (min-width: 783px) {
+			top: 32px;
+		}
+	}
 }
