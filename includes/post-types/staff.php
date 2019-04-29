@@ -54,7 +54,7 @@ if (!function_exists('im_register_team_members')) {
 			'capability_type'       => 'page',
 			'show_in_rest'          => true,
 		);
-		register_post_type('team_members', $args);
+		register_post_type('team_member', $args);
 	}
 	add_action('init', 'im_register_team_members', 0);
 }
