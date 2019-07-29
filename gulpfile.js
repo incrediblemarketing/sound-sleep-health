@@ -48,6 +48,11 @@ var themeName = 'incredibletheme',
 		'!assets/css/partials/*'
 	];
 
+function swallowError (error) {
+  console.log(error.toString());
+  this.emit('end');
+}
+
 gulp.task('styles', function() {
 	gulp.src('./assets/src/sass/main.scss')
 		.pipe(plumber())
@@ -116,6 +121,7 @@ gulp.task('scriptsJs', function() {
 			})
 		)
 		.pipe(uglify())
+		.on('error', swallowError)
 		.pipe(gulp.dest('./assets/dist/js/'))
 		.pipe(notify({message: 'Main scripts task complete', onLast: true}))
 		.pipe(browserSync.stream({once: true}));
