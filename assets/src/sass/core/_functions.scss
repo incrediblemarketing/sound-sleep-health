@@ -1,15 +1,26 @@
-@function column_width($columns:1, $gutters:0, $container_fluid_padding:15px) {
-  @if $container_fluid_padding == 15px {
-    @if $gutters != 0 {
-      @return calc((#{(100vw / 12)} * #{$columns}) + #{$gutters * 30px});
-    } @else {
-      @return calc(#{(100vw / 12)} * #{$columns});
-    }
-  } @else {
-    @if $gutters != 0 {
-      @return calc((((100vw - #{$container_fluid_padding}) / 12) * #{$columns}) + #{$gutters * 30px});
-    } @else {
-      @return calc(((100vw - #{$container_fluid_padding}) / 12) * #{$columns});
-    }
-  }
+@function column_width($columns:1, $gutters:0, $container_fluid_padding:15px, $values_only:false) {
+	$output_value:'';
+	@if $container_fluid_padding == 15px {
+		@if $gutters != 0 {
+			$output_value: (#{(100vw / 12)} * #{$columns}) + #{$gutters * 30px};
+		} @else {
+			$output_value:#{(100vw / 12)} * #{$columns};
+		}
+	} @else {
+		@if $gutters != 0 {      
+			$output_value:(((100vw - #{$container_fluid_padding}) / 12) * #{$columns}) + #{$gutters * 30px};
+		} @else {
+			$output_value:((100vw - #{$container_fluid_padding}) / 12) * #{$columns};
+		}
+	}
+
+	@if $values_only == true {
+		@return $output_value;
+	} @else {
+		@return calc(#{$output_value});
+	}
+}
+
+@function rem($size) {
+	@return #{$size / 18}rem;
 }
