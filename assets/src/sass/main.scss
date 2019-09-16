@@ -2,27 +2,14 @@
 // Setup
 // ==========================================================================
 
-@import "base/typography",
-        "core/colors";
+@import "core/colors";
 
 // ==========================================================================
 // Dependencies
 // ==========================================================================
 
-@import "../../../node_modules/sass-mq/mq";
-
-// ==========================================================================
-// Plugins
-// ==========================================================================
-
-@import "plugins/gravityforms",
-        "plugins/magnific-popup";
-
-// ==========================================================================
-// Bootstrap
-// ==========================================================================
-
-@import "vendor/bootstrap/bootstrap-variables",
+@import "../../../node_modules/sass-mq/mq",
+        "vendor/bootstrap/bootstrap-variables",
         "vendor/bootstrap/bootstrap";
 
 // ==========================================================================
@@ -31,7 +18,15 @@
 
 @import "core/mq-breakpoints",
         "core/functions",
-        "core/mixins";
+        "core/mixins",
+        "base/typography";
+
+// ==========================================================================
+// Plugins
+// ==========================================================================
+
+@import "plugins/gravityforms",
+        "plugins/magnific-popup";
 
 // ==========================================================================
 // Base
@@ -45,6 +40,8 @@
 // ==========================================================================
 
 @import "components/blocks",
+        "components/buttons",
         "components/social-icons",
         "components/site-nav",
+        "components/blog",
         "components/footer";

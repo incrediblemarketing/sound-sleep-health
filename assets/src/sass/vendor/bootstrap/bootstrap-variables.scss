@@ -1,9 +1,6 @@
-// ==========================================================================
-// Customize Bootstrap
-// ==========================================================================
-
-		// Reference: https://getbootstrap.com/docs/4.1/getting-started/theming/
-		// Define custom defaults for anything in node_modules/bootstrap/scss/_variables.scss
+// Custom Bootstrap Variables
+// Reference: https://getbootstrap.com/docs/4.1/getting-started/theming/
+// Define custom defaults for anything in node_modules/bootstrap/scss/_variables.scss
 
 $spacers: (
 	col: calc(100vw/12)

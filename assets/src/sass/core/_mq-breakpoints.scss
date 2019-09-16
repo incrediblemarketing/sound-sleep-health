@@ -1,8 +1,8 @@
 $mq-breakpoints: map-merge(
-    (
-        mobile: map-get($grid-breakpoints, sm),
-        tablet: map-get($grid-breakpoints, md),
-        desktop: map-get($grid-breakpoints, lg),
-    ),
-    $grid-breakpoints
+	(
+		mobile: map-get($grid-breakpoints, sm),
+		tablet: map-get($grid-breakpoints, md),
+		desktop: map-get($grid-breakpoints, lg),
+	),
+	$grid-breakpoints
 );

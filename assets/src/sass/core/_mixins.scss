@@ -1,39 +1,44 @@
-// ==========================================================================
-// Mixins
-// ==========================================================================
-
 @mixin overflow-wrap() {
-  word-break: break-word;
-  overflow-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 
-@mixin absolute($top: null, $right:null, $bottom:null, $left:null) {
-  position:absolute;
-  @if $top != null {
-    top:$top;
-  }
-  @if $right != null {
-    right:$right;
-  }
-  @if $bottom != null {
-    bottom:$bottom;
-  }
-  @if $left != null {
-    left:$left;
-  }
+@mixin absolute($top:null, $right:null, $bottom:null, $left:null) {
+	position:absolute;
+	@if $top != null {
+		top:$top;
+	}
+	@if $right != null {
+		right:$right;
+	}
+	@if $bottom != null {
+		bottom:$bottom;
+	}
+	@if $left != null {
+		left:$left;
+	}
 }
 
 @mixin absolute_cover() {
-  @include absolute(0, 0);
-  height:100%;
-  width:100%;
+	@include absolute(0, 0);
+	height:100%;
+	width:100%;
 }
 
 @mixin pseudo_cover() {
-  @include absolute_cover();
-  content:'';
-  display:block;
+	@include absolute_cover();
+	content:'';
+	display:block;
+}
+
+@mixin background_cover($position:center center) {
+	background-size:cover; background-position:$position; background-repeat:no-repeat;
+}
+
+@mixin pseudo_background_cover($position:center center) {
+	@include pseudo_cover();
+	@include background_cover($position);
 }
