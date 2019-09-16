@@ -18,7 +18,7 @@ if (have_rows('blocks')) :
 			$block_bg_image = get_block_bg_image($block, $defaults)['sizes']['large'];
 			$block_content_bg_image = get_block_content_bg_image($block_content, $defaults)['sizes']['large'];
 
-			echo '<div id="block-' . $block_id . '" class="block block-' . $layout . ' ' . $block_class . '"';
+			echo '<section id="block-' . $block_id . '" class="block block-' . $layout . ' ' . $block_class . '"';
 			echo $block_bg_color ? ' data-bg-color="' . $block_bg_color . '"' : '';
 			echo $block_bg_image ? ' data-bg-image="' . $block_bg_image . '"' : '';
 			echo '>';
@@ -34,7 +34,7 @@ if (have_rows('blocks')) :
 					echo get_block_content_video($block_content, $defaults);
 				echo '</div>';
 				echo get_block_video($block, $defaults);
-			echo '</div>';
+			echo '</section>';
 		}
 	endwhile;
 endif;
