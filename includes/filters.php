@@ -6,15 +6,15 @@ function im_excerpt_more($more) {
   return '&hellip;';
 }
 
-// add class to previous_posts_link
-add_filter('previous_posts_link_attributes', 'im_previous_posts_link_attributes');
-function im_previous_posts_link_attributes($attr) {
+// add class to next_posts_link
+add_filter('next_posts_link_attributes', 'im_next_posts_link_attributes');
+function im_next_posts_link_attributes($attr) {
   return 'class="ml-auto"';
 }
 
-// add class to previous_post_link
-add_filter('previous_post_link', 'im_previous_post_link_attributes');
-function im_previous_post_link_attributes($output) {
+// add class to next_post_link
+add_filter('next_post_link', 'im_next_post_link_attributes');
+function im_next_post_link_attributes($output) {
   $attr = 'class="ml-auto"';
   return str_replace('<a href=', '<a ' . $attr . ' href=', $output);
 }
