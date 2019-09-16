@@ -1,22 +1,26 @@
 <?php
 
-	$background_image = get_field('page_header_background_image') ?: get_field('header_image', 'options');
+	$post_id = get_the_id();
 
 	if (is_home()) {
-		$page_for_posts = get_option( 'page_for_posts' );
-		$background_image = get_field('page_header_background_image', $page_for_posts) ?: get_field('header_image', 'options');
+		$post_id = get_option('page_for_posts');
 	}
+
+	$page_title = get_the_title($post_id);
+	if (is_single() && 'team_member' == get_post_type($post_id) ) {
+		$page_title = 'Staff';
+	}
+
+	$background_image = get_field('page_header_background_image', $post_id) ?: get_field('header_image', 'options');
 
 ?>
 
 <header
-	class="page-header bg-light"
+	class="page-header"
 	<?php echo $background_image ? 'data-bg-image="' . $background_image . '"' : ''; ?>
 	>
 	<h1>
-		<?php if (is_front_page()) : ?>
-			Front page title
-		<?php elseif ( is_home() ) : ?>
+		<?php if ( is_home() ) : ?>
 			Blog
 		<?php elseif ( is_category() ) : ?>
 			Category<br><small><?php single_cat_title(); ?></small>
