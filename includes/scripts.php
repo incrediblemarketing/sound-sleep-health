@@ -1,7 +1,9 @@
 <?php
 
-function im_register_scripts()
-{
+function im_register_scripts() {
+	$theme = wp_get_theme();
+  $theme_version = $theme->get('Version');
+
 	// Comment in/out the gsap plugins you wish to use.
 	$gsap_plugins = array(
 		// 'AttrPlugin.min.js',
@@ -49,7 +51,7 @@ function im_register_scripts()
 	wp_register_script('scrollindicator', get_template_directory_uri() . '/assets/dist/plugins/scrollmagic/plugins/debug.addIndicators.min.js', '', '', true);
 	wp_register_script('modernizr', get_template_directory_uri() . '/assets/dist/plugins/modernizr-3.0.0.min.js');
 	wp_register_script('plugins', get_template_directory_uri() . '/assets/dist/js/plugins.min.js', array('jquery'), false);
-	wp_register_script('main', get_template_directory_uri() . '/assets/dist/js/main.min.js', array('plugins'), false);
+	wp_register_script('main', get_template_directory_uri() . '/assets/dist/js/main.min.js', array('plugins'), false, $theme_version);
 }
 add_action('wp_enqueue_scripts', 'im_register_scripts');
 
