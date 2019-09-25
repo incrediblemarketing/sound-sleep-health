@@ -8,40 +8,48 @@
 // Dependencies
 // ==========================================================================
 
-@import "../../../node_modules/sass-mq/mq",
-        "vendor/bootstrap/bootstrap-variables",
-        "vendor/bootstrap/bootstrap";
+@import "../../../node_modules/sass-mq/mq";
+@import "vendor/bootstrap/bootstrap-variables";
+@import "vendor/bootstrap/bootstrap";
 
 // ==========================================================================
 // Settings
 // ==========================================================================
 
-@import "core/mq-breakpoints",
-        "core/functions",
-        "core/mixins",
-        "base/typography";
+@import "core/mq-breakpoints";
+@import "core/functions";
+@import "core/mixins";
+@import "base/typography";
 
 // ==========================================================================
 // Plugins
 // ==========================================================================
 
-@import "plugins/gravityforms",
-        "plugins/magnific-popup";
+@import "plugins/gravityforms";
+@import "plugins/magnific-popup";
 
 // ==========================================================================
 // Base
 // ==========================================================================
 
-@import "base/helpers",
-        "base/base";
+@import "base/helpers";
+@import "base/base";
 
 // ==========================================================================
 // Components
 // ==========================================================================
 
-@import "components/blocks",
-        "components/buttons",
-        "components/social-icons",
-        "components/site-nav",
-        "components/blog",
-        "components/footer";
+/*component_insert*/
+@import "components/buttons";
+@import "components/social-icons";
+@import "components/site-nav";
+@import "components/blog";
+@import "components/footer";
+
+// ==========================================================================
+// Blocks
+// ==========================================================================
+
+@import "components/blocks/blocks";
+/*block_insert*/
+        
