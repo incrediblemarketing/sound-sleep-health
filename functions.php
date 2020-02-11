@@ -59,11 +59,3 @@ require_once get_template_directory() . '/includes/shortcodes/staff.php';
 // PLUGINS
 // ==================================================
 require_once get_template_directory() . '/includes/plugins.php';
-
-// UPDATE CHECKER
-// ==================================================
-// require_once get_template_directory() . '/includes/theme-updates/theme-update-checker.php';
-// $im_update_checker = new ThemeUpdateChecker(
-//   'incredibletheme',
-//   'https://imcustomtheme.wpengine.com/incredible.json'
-// );
