@@ -1,55 +1,46 @@
 // ==========================================================================
 // Setup
 // ==========================================================================
-
 @import "core/colors";
-
 // ==========================================================================
 // Dependencies
 // ==========================================================================
-
 @import "../../../node_modules/sass-mq/mq";
 @import "vendor/bootstrap/bootstrap-variables";
 @import "vendor/bootstrap/bootstrap";
-
 // ==========================================================================
 // Settings
 // ==========================================================================
-
 @import "core/mq-breakpoints";
 @import "core/functions";
 @import "core/mixins";
 @import "base/typography";
-
 // ==========================================================================
 // Plugins
 // ==========================================================================
-
 @import "plugins/gravityforms";
 @import "plugins/magnific-popup";
-
 // ==========================================================================
 // Base
 // ==========================================================================
-
 @import "base/helpers";
 @import "base/base";
-
 // ==========================================================================
 // Components
 // ==========================================================================
 
 /*component_insert*/
+
 @import "components/buttons";
 @import "components/social-icons";
 @import "components/site-nav";
+@import "components/mobile-menu";
+@import "components/forms";
 @import "components/blog";
 @import "components/footer";
-
 // ==========================================================================
 // Blocks
 // ==========================================================================
-
 @import "components/blocks/blocks";
+
 /*block_insert*/
-        
