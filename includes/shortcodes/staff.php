@@ -1,31 +1,44 @@
 <?php
+/**
+ * Shortcode to display staff members
+ *
+ * @category   Components
+ * @package    WordPress
+ * @subpackage Incredible Theme
+ * @author     Nick Gonzales
+ * @license    https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3
+ * @link       https://www.incrediblemarketing.com/
+ * @since      1.0.0
+ */
 
-function shortcode_staff($atts)
-{
+/**
+ * Staff member shortcode [staff]
+ */
+function shortcode_staff() {
 	global $post;
 
 	$args = array(
 		'post_type'      => 'team_member',
 		'posts_per_page' => -1,
 		'order'          => 'ASC',
-		'orderby'        => 'menu_order'
+		'orderby'        => 'menu_order',
 	);
 
-
-	$staff = new WP_Query($args);
+	$staff   = new WP_Query( $args );
 	$content = '';
-	if ($staff->have_posts()) :
-		while ($staff->have_posts()) : $staff->the_post();
+	if ( $staff->have_posts() ) :
+		while ( $staff->have_posts() ) :
+			$staff->the_post();
 			$content .= '<div class="block__team-member">';
-			$content .= get_the_post_thumbnail($post->ID, 'featured_thumb');
+			$content .= get_the_post_thumbnail( $post->ID, 'featured_thumb' );
 			$content .= '<h3>' . get_the_title() . '</h3>';
-			$content .= '<h5>' . get_sub_field('job_title') . '</h5>';
+			$content .= '<h5>' . get_sub_field( 'job_title' ) . '</h5>';
 			$content .= get_the_content();
 			$content .= '</div>';
-		endwhile;
+			endwhile;
 		wp_reset_postdata();
-	endif;
+		endif;
 
 	return $content;
 }
-add_shortcode('staff', 'shortcode_staff');
+add_shortcode( 'staff', 'shortcode_staff' );

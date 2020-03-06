@@ -1,6 +1,6 @@
 <?php
 /**
- * Footer menu
+ * Shortcode to display child pages
  *
  * @category   Components
  * @package    WordPress
@@ -12,13 +12,11 @@
  */
 
 /**
- * Register Footer Menu
+ * Child page shortcode [child_pages]
  */
-function im_register_footer_menu() {
-	register_nav_menus(
-		array(
-			'footer-menu' => __( 'Footer Menu' ),
-		)
-	);
+function shortcode_child_pages() {
+	ob_start();
+	get_template_part( 'components/navigation-child-pages' );
+	return ob_get_clean();
 }
-add_action( 'init', 'im_register_footer_menu' );
+add_shortcode( 'child_pages', 'shortcode_child_pages' );

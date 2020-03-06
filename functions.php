@@ -61,10 +61,10 @@ require_once get_template_directory() . '/includes/sidebars/blog.php';
 // SHORTCODES
 // ==================================================.
 require_once get_template_directory() . '/includes/shortcodes/btn.php';
-require_once get_template_directory() . '/includes/shortcodes/call_number.php';
-require_once get_template_directory() . '/includes/shortcodes/reusable_block.php';
+require_once get_template_directory() . '/includes/shortcodes/call-number.php';
+require_once get_template_directory() . '/includes/shortcodes/reusable-block.php';
 require_once get_template_directory() . '/includes/shortcodes/sidebar.php';
-require_once get_template_directory() . '/includes/shortcodes/child_pages.php';
+require_once get_template_directory() . '/includes/shortcodes/child-pages.php';
 require_once get_template_directory() . '/includes/shortcodes/staff.php';
 
 // PLUGINS
