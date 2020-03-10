@@ -25,7 +25,7 @@ export function cli(args) {
     let block = options.block;
     fs.writeFile(
       `./components/blocks/${block}.php`,
-      '<?php\n/**\n* Display Blocks\n*\n* @category   Components\n* @package    WordPress\n* @subpackage Incredible Theme\n* @author     Nick Gonzales\n* @license    https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3\n* @link       https://www.incrediblemarketing.com/\n* @since      1.0.0\n*/\n?>\n\n<div class="container-fluid">\n  <div class="row">\n\n  </div>\n</div>',
+      '<?php\n/**\n * Display Block\n *\n * @category   Components\n * @package    WordPress\n * @subpackage Incredible Theme\n * @author     Nick Gonzales\n * @license    https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3\n * @link       https://www.incrediblemarketing.com/\n * @since      1.0.0\n */\n\n?>\n\n<div class="container-fluid">\n  <div class="row">\n\n </div>\n</div>',
       err => {
         if (err) throw err;
       }
