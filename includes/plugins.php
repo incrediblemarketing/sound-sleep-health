@@ -23,7 +23,7 @@ function incredible__register_required_plugins() {
 		array(
 			'name'         => 'Advanced Custom Fields Pro',
 			'slug'         => 'advanced-custom-fields-pro',
-			'source'       => get_template_directory() . '/includes/plugins/advanced-custom-fields-pro.zip',
+			'source'       => get_template_directory() . '/includes/plugins/advanced-custom-fields.zip',
 			'external_url' => 'https://www.advancedcustomfields.com/pro/',
 			'required'     => true,
 		),
