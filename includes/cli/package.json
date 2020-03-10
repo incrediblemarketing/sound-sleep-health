@@ -1,0 +1,29 @@
+{
+  "name": "@andwilr/imtheme",
+  "version": "1.0.0",
+  "description": "A CLI to speed up theme development",
+  "main": "src/index.js",
+  "bin": {
+    "@andwilr/imtheme": "bin/imtheme",
+    "imtheme": "bin/imtheme"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "bin/",
+    "src/"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "arg": "^4.1.1",
+    "esm": "^3.2.25",
+    "fs": "0.0.1-security",
+    "inquirer": "^7.0.0"
+  }
+}
