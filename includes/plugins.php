@@ -43,20 +43,6 @@ function incredible__register_required_plugins() {
 		),
 
 		array(
-			'name'         => 'WPMU DEV Dashboard',
-			'slug'         => 'wpmudev-updates',
-			'source'       => get_template_directory() . '/includes/plugins/wpmudev-updates.zip',
-			'external_url' => 'https://premium.wpmudev.org/project/wpmu-dev-dashboard/',
-			'required'     => false,
-		),
-
-		array(
-			'name'     => 'Custom Post Type UI',
-			'slug'     => 'custom-post-type-ui',
-			'required' => false,
-		),
-
-		array(
 			'name'     => 'GatherContent Plugin',
 			'slug'     => 'gathercontent-import',
 			'required' => false,
