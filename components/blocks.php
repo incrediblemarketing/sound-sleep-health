@@ -30,21 +30,15 @@ if ( have_rows( 'blocks' ) ) :
 			$block_bg_image         = get_block_bg_image( $block, $defaults )['sizes']['large'];
 			$block_content_bg_image = get_block_content_bg_image( $block_content, $defaults )['sizes']['large'];
 
-			echo '<section id="block-' . esc_attr( $block_id ) . '" class="block block-' . esc_attr( $layout ) . ' ' . esc_attr( $block_class ) . '"';
+			echo '<section id="block-' . esc_attr( $block_id ) . '" class="block block--' . esc_attr( $layout ) . ' ' . esc_attr( $block_class ) . '"';
 			echo $block_bg_color ? ' data-bg-color="' . esc_attr( $block_bg_color ) . '"' : '';
 			echo $block_bg_image ? ' data-bg-image="' . esc_attr( $block_bg_image ) . '"' : '';
 			echo '>';
-				echo '<div class="block-content ' . esc_attr( $block_content_class ) . '"';
-				echo $block_content_bg_color ? ' data-bg-color="' . esc_attr( $block_content_bg_color ) . '"' : '';
-				echo $block_content_bg_image ? ' data-bg-image="' . esc_attr( $block_content_bg_image ) . '"' : '';
-				echo '>';
 		}
 
 		echo get_template_part( 'components/blocks/' . $layout );
 
 		if ( $wrap_as_block ) {
-					echo get_block_content_video( $block_content, $defaults );
-				echo '</div>';
 				echo get_block_video( $block, $defaults );
 			echo '</section>';
 		}
