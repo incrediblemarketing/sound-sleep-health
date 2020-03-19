@@ -1,1 +1,10 @@
-.im-logo {height:1em; display:inline-block; margin-top:-.1em; fill:currentColor; vertical-align:middle;}
+.im-logo {
+  height: 1em;
+  display: inline-block;
+  margin-top: -0.1em;
+  fill: $white;
+  vertical-align: middle;
+  background: $magenta;
+  border-radius: 100em;
+  padding: 3px;
+}

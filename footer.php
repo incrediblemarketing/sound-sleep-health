@@ -24,7 +24,7 @@
 <footer class="footer bg-light">
 	<?php get_template_part( 'components/social-icons' ); ?>
 	<?php if ( $phone_url && $phone ) : ?>
-	<p><a href="tel:<?php echo esc_attr( $phone_url ); ?>"><?php echo esc_attr( $phone ); ?></a></p>
+	<p><a href="tel:+1-<?php echo esc_attr( $phone_url ); ?>"><?php echo esc_attr( $phone ); ?></a></p>
 	<?php endif; ?>
 
 	<?php if ( $address_link && $address && $address2 ) : ?>
@@ -33,9 +33,7 @@
 			<?php echo esc_attr( $address2 ); ?></a></p>
 	<?php endif; ?>
 
-	<p>&copy; <?php echo esc_attr( gmdate( 'Y' ) ); ?> <?php echo esc_attr( $copyright ) ?: esc_attr( get_bloginfo() ); ?></p>
-
-	<p>Digital Marketing By <a href="https://www.incrediblemarketing.com/" target="_blank"><?php get_template_part( 'components/svg/incredible-marketing' ); ?>Incredible Marketing</a></p>
+	<p>&copy; <?php echo esc_attr( gmdate( 'Y' ) ); ?> <?php echo esc_attr( $copyright ) ?: esc_attr( get_bloginfo() ); ?> | <a href="/privacy-policy/">Privacy Policy</a> & <a href="/terms-of-use/">Terms of Use</a> | Digital Marketing By <a href="https://www.incrediblemarketing.com/" target="_blank"><?php get_template_part( 'components/svg/incredible-marketing' ); ?>Incredible Marketing</a></p>
 </footer>
 
 </div><!-- end of .site-wrap -->
