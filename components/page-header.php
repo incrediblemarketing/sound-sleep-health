@@ -33,7 +33,7 @@ if ( is_single() && 'team_member' === get_post_type( $postid ) ) {
 		<?php elseif ( is_category() ) : ?>
 			Category<br><small><?php single_cat_title(); ?></small>
 		<?php elseif ( is_archive() ) : ?>
-			Archive<br><small><?php the_archive_title(); ?></small>
+			<?php post_type_archive_title( '' ); ?>
 		<?php elseif ( is_search() ) : ?>
 			Search<br><small>
 				<?php
