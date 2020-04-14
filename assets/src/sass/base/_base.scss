@@ -6,7 +6,7 @@ html {
 body {
   font-family: $nunito;
   font-size: 1rem;
-  line-height: 1.7777em;
+  line-height: em(32, 18);
   color: $charcoal;
 }
 
@@ -18,6 +18,10 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+p {
+  margin-bottom: 35px;
 }
 
 h1,
@@ -37,7 +41,8 @@ h1 {
   color: $primary;
 }
 
-h5 {
+h5,
+.h5 {
   font-family: $nunito;
   font-style: normal;
   font-weight: normal;

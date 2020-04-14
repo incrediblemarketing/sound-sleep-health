@@ -1,0 +1,152 @@
+.block--homepage_service {
+  background: $primary;
+  color: $white;
+  padding: 200px 0 200px 60px;
+  z-index: 1;
+
+  .image--top {
+    transform: translateY(-678px);
+    position: relative;
+    z-index: 0;
+    margin-bottom: -430px;
+
+    &::before {
+      content: "";
+      background: url(/wp-content/uploads/2020/04/circle.png) center / cover
+        no-repeat;
+      position: absolute;
+      left: 50%;
+      top: 46%;
+      transform: translate(-50%, -50%);
+      height: 1500px;
+      width: 1500px;
+      z-index: -1;
+    }
+  }
+
+  h4 {
+    @extend h5;
+    color: $white;
+    margin: 0;
+  }
+
+  h2 {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 124px;
+    @include fontSize(124);
+    line-height: em(149, 124);
+    letter-spacing: 1.85vw;
+    color: $white;
+    margin-bottom: 50px;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 350px;
+      width: 350px;
+      background: rgba(216, 216, 216, 0.0001);
+      mix-blend-mode: normal;
+      opacity: 0.1;
+      border: 2px solid $white;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(-14%, -50%);
+      border-radius: 100em;
+    }
+  }
+
+  .list--services {
+    padding: 0;
+    margin: 0 0 100px;
+    column-count: 2;
+    column-gap: 1vw;
+    list-style: none;
+
+    li {
+      padding-left: 19px;
+
+      &::before {
+        content: "\f0da";
+        font-family: $fontawesome;
+        color: $white;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: -18px;
+        margin-right: 11px;
+      }
+
+      a {
+        color: $white;
+        font-weight: 800;
+        @include fontSize(24);
+        line-height: em(56, 24);
+
+        &:hover {
+          color: $charcoal;
+        }
+      }
+    }
+  }
+
+  .image--bottom {
+    max-width: 100%;
+    height: auto;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      padding: 50px;
+      background: $primary;
+      border: 1px solid $white;
+      border-radius: 100em;
+    }
+  }
+
+  h3 {
+    font-style: italic;
+    font-weight: 500;
+    @include fontSize(52);
+    line-height: em(56, 52);
+    position: relative;
+    padding-left: 15px;
+
+    &::after {
+      content: "";
+      height: 200px;
+      width: 200px;
+      mix-blend-mode: normal;
+      opacity: 0.1;
+      border: 2px solid $white;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-28%, -50%);
+      border-radius: 100em;
+    }
+  }
+
+  p {
+    padding-left: 15px;
+    padding-right: 25px;
+    @include fontSize(24);
+    line-height: em(56, 24);
+    margin-bottom: 40px;
+  }
+
+  .btn--circle {
+    margin-left: auto;
+    position: relative;
+
+    .line {
+      height: 2px;
+      width: 39vw;
+      background: $white;
+      position: absolute;
+      top: 50%;
+      right: 90%;
+      z-index: -1;
+    }
+  }
+}

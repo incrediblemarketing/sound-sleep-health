@@ -72,7 +72,7 @@
           position: absolute;
           top: 100%;
           left: 0;
-          background: $white;
+          background: rgba($white, 0.9);
           width: 250px;
 
           li {
@@ -95,7 +95,7 @@
                 list-style: none;
                 display: block;
                 position: absolute;
-                background: $white;
+                background: rgba($white, 0.9);
                 width: 250px;
               }
             }
@@ -198,6 +198,10 @@
     .text,
     .line {
       display: none;
+    }
+
+    .call {
+      margin-right: 0;
     }
   }
 }
