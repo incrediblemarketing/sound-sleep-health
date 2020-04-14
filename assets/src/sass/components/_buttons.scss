@@ -1,0 +1,18 @@
+.btn-primary {
+  background: transparent;
+  color: $primary;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.19em;
+  font-family: $garamond-pro;
+  position: relative;
+  left: 0;
+  transition: left 0.4s ease-in-out;
+
+  &:hover {
+    background: transparent;
+    color: $primary;
+    left: 15px;
+  }
+}

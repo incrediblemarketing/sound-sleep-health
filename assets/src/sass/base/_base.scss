@@ -1,19 +1,54 @@
 html {
-    background: white;
+  background: white;
+  font-size: 18px;
+}
+
+body {
+  font-family: $nunito;
+  font-size: 1rem;
+  line-height: 1.7777em;
+  color: $charcoal;
 }
 
 *:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 a {
-    &:hover {
-        text-decoration: none;
-    }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $garamond-pro;
+  font-style: italic;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 1.138em;
+  color: $primary;
+}
+
+h5 {
+  font-family: $nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.333rem;
+  line-height: 1.375em;
+  text-transform: uppercase;
+  color: $gray-font;
 }
 
 .site-wrap {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 // Remove subpixel-antialiased default but keep for retina resolutions.
@@ -21,23 +56,26 @@ a {
 *,
 *:after,
 *:before {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
-        -webkit-font-smoothing: subpixel-antialiased;
-    }
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+    only screen and (min-device-pixel-ratio: 1.25),
+    only screen and (min-resolution: 200dpi),
+    only screen and (min-resolution: 1.25dppx) {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
 }
 
 // Remove text-shadow in selection highlight:
 // https://twitter.com/miketaylr/status/12228805301
 ::-moz-selection {
-    background: $selection-highlight-background;
-    color: $selection-highlight-color;
-    text-shadow: none;
+  background: $selection-highlight-background;
+  color: $selection-highlight-color;
+  text-shadow: none;
 }
 
 ::selection {
-    background: $selection-highlight-background;
-    color: $selection-highlight-color;
-    text-shadow: none;
+  background: $selection-highlight-background;
+  color: $selection-highlight-color;
+  text-shadow: none;
 }

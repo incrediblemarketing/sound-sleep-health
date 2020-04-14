@@ -1,6 +1,6 @@
 <?php
 /**
- * Display Call Number
+ * Display Text Number
  *
  * @category   Components
  * @package    WordPress
@@ -18,8 +18,7 @@
 ?>
 
 <?php if ( $business_phone_display && $business_phone_url ) : ?>
-	<a class="call" href="tel:<?php echo esc_attr( $business_phone_url ); ?>">
-		<i class="fas fa-phone"></i> <span><?php echo esc_attr( $business_phone_display ); ?></span>
-		<strong>GET IN TOUCH</strong>
+	<a class="text" href="sms:<?php echo esc_attr( $business_phone_url ); ?>">
+		<i class="fal fa-mobile-alt"></i>
 	</a>
 <?php endif; ?>

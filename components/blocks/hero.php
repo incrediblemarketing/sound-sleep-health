@@ -11,11 +11,8 @@
  * @since      1.0.0
  */
 
-
-$content                = get_sub_field( 'content' );
-$image                  = get_sub_field( 'background_image' );
-$business_phone_display = get_field( 'business_phone_display', 'options' );
-$business_phone_url     = get_field( 'business_phone_url', 'options' );
+$content = get_sub_field( 'content' );
+$image   = get_sub_field( 'background_image' );
 ?>
 <?php if ( ! empty( $image ) ) : ?>
 	<div class="image--holder">
@@ -23,20 +20,13 @@ $business_phone_url     = get_field( 'business_phone_url', 'options' );
 	</div>
 <?php endif; ?>
 
+<div class="box--shadow"></div>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xxl-6 offset-xl-1 col-xl-7 col-lg-8">
+		<div class="col-xxl-5 offset-xl-1 col-xl-6 col-lg-7">
 			<?php echo $content; ?>
-			<?php if ( $business_phone_display && $business_phone_url ) : ?>
-				<a class="btn btn-primary" href="tel:<?php echo esc_attr( $business_phone_url ); ?>">Call <?php echo esc_attr( $business_phone_display ); ?></a>
-			<?php endif; ?>
-			<br/>
-			<a href="#" class="js-scroll-to">
-				<div class="more">
-					<div class="line"></div>
-					<p>Begin Exploring</p>
-				</div>
-			</a>
+			<a class="btn-primary" href="/contact/">Request an appointment today!</a>
 		</div>
 	</div>
 </div>
+<?php get_template_part( 'components/social-icons' ); ?>

@@ -69,7 +69,7 @@ function im_get_placeholder_image( $size = full, $class = '', $bg_color = '25252
  * @param string|int   $text_color string or int (usually a HEX) as its the text color.
  */
 function im_the_placeholder_image( $size = full, $class = '', $bg_color = '252525', $text_color = 'FFFFFF' ) {
-	echo esc_html( im_get_placeholder_image( $size, $class, $bg_color, $text_color ) );
+	echo im_get_placeholder_image( $size, $class, $bg_color, $text_color );
 }
 
 /**

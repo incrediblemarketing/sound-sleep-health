@@ -1,9 +1,203 @@
 .site-nav {
-	
-	.sub-menu {display:none;}
+  background: linear-gradient(
+    180deg,
+    #ffffff 50%,
+    rgba(249, 249, 249, 0.0001) 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  padding: 58px 210px 40px;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.5s ease-in-out;
 
-	// offset if WP admin bar is present
-	.admin-bar & {top:46px;
-		@media (min-width: 783px) {top:32px;}
-	}
+  .menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s ease-in-out;
+
+    > li {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 1.388em;
+      text-align: center;
+      margin: 0 5px;
+      display: block;
+      position: relative;
+      text-align: left;
+
+      > a {
+        color: $charcoal;
+        display: block;
+        padding: 15px;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 100px;
+          height: 1px;
+          background: $primary;
+          position: absolute;
+          bottom: 2.5px;
+          left: 50%;
+          transform: translateX(-50%) scale(0);
+          transition: all 0.4s ease-in-out;
+        }
+
+        &:hover {
+          color: $primary;
+
+          &::before {
+            transform: translateX(-50%) scale(1);
+          }
+        }
+      }
+      &:hover {
+        > .sub-menu {
+          padding: 0;
+          list-style: none;
+          display: block;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: $white;
+          width: 250px;
+
+          li {
+            a {
+              padding: 8px 15px;
+              color: $charcoal;
+              display: block;
+
+              &:hover {
+                background: $primary;
+                color: $white;
+              }
+            }
+
+            &:hover {
+              > .sub-menu {
+                left: 100%;
+                top: 0;
+                padding: 0;
+                list-style: none;
+                display: block;
+                position: absolute;
+                background: $white;
+                width: 250px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header--right {
+    display: flex;
+    align-items: center;
+
+    .line {
+      height: 50px;
+      width: 1px;
+      background: #dcdcdc;
+    }
+
+    .text {
+      margin-right: 40px;
+      font-size: 30px;
+      color: $charcoal;
+    }
+
+    .call {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      line-height: 1.388em;
+      font-weight: 800;
+      margin-left: 30px;
+      margin-right: 101px;
+      color: $charcoal;
+
+      strong {
+        font-size: 16px;
+        line-height: 1.375em;
+        color: $gray-font;
+        text-transform: uppercase;
+      }
+
+      i {
+        display: none;
+      }
+    }
+
+    .btn-contact {
+      font-size: 16px;
+      line-height: 1.375em;
+      text-transform: uppercase;
+      color: $charcoal;
+      font-weight: 800;
+      margin-left: 31px;
+    }
+  }
+
+  button[data-toggle="menu"] {
+    display: none;
+  }
+
+  .sub-menu {
+    display: none;
+  }
+
+  // offset if WP admin bar is present
+  .admin-bar & {
+    top: 46px;
+    @media (min-width: 783px) {
+      top: 32px;
+    }
+  }
+
+  &.sticky {
+    padding: 0 25px;
+    background: rgba($white, 0.9);
+    box-shadow: rgba($black, 0.1) 4px 4px 10px;
+
+    .menu {
+      position: relative;
+      top: unset;
+      left: unset;
+      transform: unset;
+
+      > li {
+        > a {
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &::before {
+            bottom: 15px;
+          }
+        }
+      }
+    }
+
+    .btn-contact,
+    .text,
+    .line {
+      display: none;
+    }
+  }
 }

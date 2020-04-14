@@ -27,8 +27,14 @@
 	wp_nav_menu( $args );
 	?>
 
-	<?php get_template_part( 'components/call' ); ?>
-	<?php get_template_part( 'components/social-icons' ); ?>
+	<div class="header--right">
+		<?php get_template_part( 'components/text' ); ?>
+		<div class="line"></div>
+		<?php get_template_part( 'components/call' ); ?>
+		<div class="line"></div>
+		<a href="/contact-us/" class="btn-contact">Leave us a message</a>
+	</div>
+
 	<button data-toggle="menu">
 		<span></span>
 		<span></span>
