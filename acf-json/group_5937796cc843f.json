@@ -298,6 +298,54 @@
             "endpoint": 0
         },
         {
+            "key": "field_5e97cf4592d46",
+            "label": "Homepage Footer Image",
+            "name": "homepage_footer_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e97cf6d92d47",
+            "label": "Footer Image",
+            "name": "footer_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_593799c61900a",
             "label": "Copyright",
             "name": "copyright",
@@ -424,9 +472,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5e94cd170aeb2",
-            "label": "Business Location",
-            "name": "business_location",
+            "key": "field_5e97d6a8b2896",
+            "label": "Business Info",
+            "name": "business_info",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -443,26 +491,7 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5e94cd99cebdd",
-                    "label": "Business Location",
-                    "name": "business_location",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5982496426a5a",
+                    "key": "field_5e97d6a8b2897",
                     "label": "Business Street Address",
                     "name": "business_street_address",
                     "type": "text",
@@ -481,7 +510,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5982497826a5b",
+                    "key": "field_5e97d6a8b2898",
                     "label": "Business City State Zip",
                     "name": "business_city_state_zip",
                     "type": "text",
@@ -500,7 +529,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_598250b8eaa29",
+                    "key": "field_5e97d6a8b2899",
                     "label": "Business Address Link (Directions)",
                     "name": "business_address_link",
                     "type": "url",
@@ -516,7 +545,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_5982499626a5c",
+                    "key": "field_5e97d6a8b289a",
                     "label": "Business Phone Display",
                     "name": "business_phone_display",
                     "type": "text",
@@ -535,7 +564,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_598249a726a5d",
+                    "key": "field_5e97d6a8b289b",
                     "label": "Business Phone URL",
                     "name": "business_phone_url",
                     "type": "text",
@@ -554,7 +583,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5e94ce7d0516e",
+                    "key": "field_5e97d6a8b289c",
                     "label": "Business Fax",
                     "name": "business_fax",
                     "type": "text",
@@ -571,6 +600,21 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_5e97e4888da24",
+                    "label": "Page Link",
+                    "name": "page_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         }
@@ -592,5 +636,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1586810504
+    "modified": 1587012757
 }

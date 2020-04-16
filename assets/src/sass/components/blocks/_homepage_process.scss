@@ -1,0 +1,66 @@
+.block--homepage_process {
+  padding: 200px 0;
+  color: $white;
+  z-index: 0;
+
+  .image__holder {
+    @include absolute_cover();
+    z-index: -1;
+
+    img {
+      @include absolute_cover();
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  h2,
+  h4 {
+    text-align: center;
+  }
+
+  h4 {
+    @extend h5;
+    color: $white;
+  }
+
+  h2 {
+    font-style: italic;
+    font-weight: 500;
+    @include fontSize(124);
+    line-height: em(149, 124);
+    letter-spacing: 1.85vw;
+    margin-bottom: 89px;
+  }
+
+  .grid--content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 9vw 10vw;
+    padding: 0 45px;
+
+    @include mq(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .content--single {
+      padding-left: 150px;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 38px;
+      }
+
+      h3 {
+        font-style: italic;
+        font-weight: 500;
+        @include fontSize(42);
+        line-height: em(50, 42);
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

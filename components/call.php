@@ -11,7 +11,7 @@
  * @since      1.0.0
  */
 
-	$business_location      = get_field( 'business_location', 'options' )[0];
+	$business_location      = get_field( 'business_info', 'options' )[0];
 	$business_phone_display = $business_location['business_phone_display'];
 	$business_phone_url     = $business_location['business_phone_url'];
 

@@ -1,0 +1,126 @@
+.block--homepage_insurance {
+  .logo--grid {
+    display: grid;
+    width: calc(100% + 28px);
+    margin-left: -28px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    grid-template-areas:
+      ". . . . ."
+      ". a b c ."
+      ". d e f ."
+      ". g h i ."
+      ". . . . .";
+    align-items: center;
+
+    .item-1 {
+      grid-area: a;
+    }
+    .item-2 {
+      grid-area: b;
+    }
+    .item-3 {
+      grid-area: c;
+    }
+    .item-4 {
+      grid-area: d;
+    }
+    .item-5 {
+      grid-area: e;
+    }
+    .item-6 {
+      grid-area: f;
+    }
+    .item-7 {
+      grid-area: g;
+    }
+    .item-8 {
+      grid-area: h;
+    }
+    .item-9 {
+      grid-area: i;
+    }
+
+    .square {
+      border-left: 1px solid #d2d2d2;
+      border-top: 1px solid #d2d2d2;
+
+      height: 225px;
+      width: 225px;
+      &:nth-of-type(16),
+      &:nth-of-type(18),
+      &:nth-of-type(20) {
+        border-left: 0;
+      }
+      &:nth-of-type(22),
+      &:nth-of-type(23),
+      &:nth-of-type(24) {
+        border-top: 0;
+      }
+    }
+
+    .item {
+      border-top: 1px solid $primary;
+      border-left: 1px solid $primary;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 225px;
+      width: 225px;
+
+      &:nth-child(3n) {
+        border-right: 1px solid $primary;
+      }
+
+      &:nth-child(n + 7) {
+        border-bottom: 1px solid $primary;
+      }
+    }
+  }
+
+  .content--area {
+    align-self: center;
+    padding-left: 39px;
+    padding-right: 65px;
+
+    h3 {
+      color: $primary;
+      font-style: italic;
+      font-weight: 500;
+      @include fontSize(42);
+      line-height: em(50, 42);
+      margin-bottom: 28px;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 4px;
+        position: absolute;
+        top: 25px;
+        right: 103%;
+        background: $primary;
+      }
+    }
+    .btn--orange {
+      position: relative;
+      margin-left: auto;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 90%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40vw;
+        height: 2px;
+        background: $primary;
+      }
+    }
+  }
+}

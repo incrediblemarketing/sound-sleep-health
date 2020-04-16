@@ -1,3 +1,120 @@
-.block-homepage_testimonials {
-  
+.block--homepage_testimonials {
+  position: relative;
+  padding-top: 408px;
+  z-index: 0;
+  color: $white;
+
+  .image__holder {
+    @include absolute_cover();
+    z-index: -1;
+    img {
+      @include absolute_cover();
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content--area {
+    padding: 0;
+
+    h2,
+    h4 {
+      padding-left: 8vw;
+    }
+
+    h4 {
+      @extend h5;
+      color: $white;
+    }
+
+    h2 {
+      font-style: italic;
+      font-weight: 500;
+      @include fontSize(124);
+      line-height: em(149, 124);
+      letter-spacing: 1.85vw;
+    }
+  }
+
+  .content--box {
+    padding: 0;
+    background: $white;
+    width: calc(100% + 3vw);
+    color: $charcoal;
+
+    .testimonial--area {
+      padding: 200px 230px;
+
+      .quote--area {
+        padding-left: 53px;
+        position: relative;
+        font-style: italic;
+        font-weight: 500;
+        @include fontSize(32);
+        line-height: em(42, 32);
+        font-family: $garamond-pro;
+
+        &::before {
+          content: url(/wp-content/themes/sound-sleep/assets/dist/img/quotes.svg);
+          position: absolute;
+          top: 10px;
+          left: 0;
+        }
+        p {
+          margin-bottom: 10px;
+        }
+        strong {
+          font-weight: normal;
+        }
+      }
+    }
+
+    .review--box {
+      display: flex;
+      border-top: 1px solid #d2d2d2;
+
+      .social--box {
+        padding: 60px 55px;
+        border-left: 1px solid #d2d2d2;
+        text-align: center;
+
+        a {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          height: 100%;
+          color: $charcoal;
+
+          h3 {
+            height: 64px;
+            align-items: center;
+            font-family: $nunito;
+            font-style: normal;
+            font-weight: normal;
+            @include fontSize(32);
+            line-height: 1em;
+            color: $charcoal;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .stars {
+            margin-top: auto;
+            margin-bottom: 23px;
+          }
+
+          p {
+            font-family: $garamond-pro;
+            font-style: italic;
+            font-weight: 500;
+            @include fontSize(32);
+            line-height: em(38, 32);
+          }
+        }
+      }
+    }
+  }
 }

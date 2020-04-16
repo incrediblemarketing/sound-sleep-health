@@ -31,4 +31,58 @@
   line-height: em(29, 24);
   text-align: center;
   font-family: $garamond-pro;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background: $white;
+    color: $primary;
+  }
+
+  &.btn--orange {
+    color: $primary;
+    border-color: $primary;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+}
+
+.btn--line {
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include fontSize(24);
+  line-height: em(29, 24);
+  text-align: center;
+  font-family: $garamond-pro;
+  color: $white;
+  white-space: nowrap;
+  padding-right: 33px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: $white;
+    margin-right: 33px;
+  }
+}
+
+.btn--primary {
+  font-family: $garamond-pro;
+  font-style: italic;
+  font-weight: 500;
+  @include fontSize(24);
+  line-height: em(29, 24);
+  text-align: center;
+  color: $white;
+  background: $primary;
+  width: 225px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 50px rgba(54, 67, 210, 0.25);
 }
