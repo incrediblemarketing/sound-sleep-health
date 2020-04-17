@@ -41,6 +41,14 @@ h1 {
   color: $primary;
 }
 
+h2 {
+  font-style: italic;
+  font-weight: 500;
+  @include fontSize(52);
+  line-height: em(62, 52);
+  color: $primary;
+}
+
 h5,
 .h5 {
   font-family: $nunito;

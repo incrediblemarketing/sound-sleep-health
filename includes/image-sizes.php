@@ -19,6 +19,7 @@ add_image_size( 'hero_thumb', 1920, 1080, true );
 add_image_size( 'page_header_thumb', 1920, 548, true );
 add_image_size( 'blog_row_thumb', 370, 223, true );
 add_image_size( 'post_large', 1430, 796, true );
+add_image_size( 'circle_thumb', 900, 900, true );
 
 /**
  * Add Image Sizes to Array
@@ -37,6 +38,7 @@ function im_image_sizes( $sizes ) {
 			'page_header_thumb'  => __( 'Page Header Thumbnail' ),
 			'blog_row_thumb'     => __( 'Blog Row Thumbnail' ),
 			'post_large'         => __( 'Post Large' ),
+			'circle_thumb'         => __( 'Circle Image' ),
 		)
 	);
 }

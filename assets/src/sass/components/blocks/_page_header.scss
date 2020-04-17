@@ -1,0 +1,63 @@
+.block--page_header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  z-index: 0;
+  padding-top: 32vh;
+  background: #00072c;
+
+  h1 {
+    margin-bottom: 3vh;
+    font-style: italic;
+    font-weight: 500;
+    @include fontSize(72);
+    line-height: em(62, 72);
+    color: $primary;
+  }
+
+  p {
+    color: $white;
+    padding-left: 32px;
+  }
+  .image__holder {
+    @include absolute_cover;
+    z-index: -3;
+    img {
+      @include absolute_cover;
+      object-fit: cover;
+      opacity: 0.75;
+    }
+  }
+
+  .btn--line {
+    padding-right: 18vw;
+    font-style: italic;
+    font-weight: 500;
+    @include fontSize(36);
+    line-height: em(43, 36);
+    margin-top: 107px;
+    margin-left: -10vw;
+    position: relative;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      left: 10px;
+      color: $white;
+    }
+  }
+
+  .shadow--box {
+    position: absolute;
+    width: 690px;
+    height: 735px;
+    left: 0px;
+    top: 289px;
+    background: #5886aa;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    z-index: 0;
+  }
+}

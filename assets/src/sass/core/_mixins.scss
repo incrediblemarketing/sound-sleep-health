@@ -48,3 +48,30 @@
 @mixin fontSize($size) {
   font-size: rem($size);
 }
+
+@keyframes scrollDown {
+  0% {
+    transform: scaleY(0);
+    transform-origin: center top;
+  }
+  32% {
+    transform: scaleY(1);
+    transform-origin: center top;
+  }
+  33% {
+    transform: scaleY(1);
+    transform-origin: center bottom;
+  }
+  65% {
+    transform: scaleY(0);
+    transform-origin: center bottom;
+  }
+  66% {
+    transform: scaleY(0);
+    transform-origin: center top;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: center top;
+  }
+}
