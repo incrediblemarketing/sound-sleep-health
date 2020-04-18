@@ -12,6 +12,10 @@
  */
 
 $content_title = get_sub_field( 'title' );
+
+if(empty($content_title)) {
+	$content_title = 'News & Updates';
+}
 ?>
 
 <div class="container-fluid">

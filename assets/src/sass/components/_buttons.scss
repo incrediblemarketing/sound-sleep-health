@@ -92,4 +92,15 @@
     background: $white;
     color: $primary;
   }
+
+  &.btn--white {
+    background: $white;
+    color: $primary;
+    border-color: $white;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
 }

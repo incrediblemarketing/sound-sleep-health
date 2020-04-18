@@ -15,7 +15,7 @@
   z-index: 99;
   transition: all 0.5s ease-in-out;
 
-  body:not(.home) & {
+  body:not(.home):not(.blog):not(.single-post):not(.page) & {
     background: transparent;
     color: $white;
 
@@ -76,7 +76,8 @@
       display: block;
       position: relative;
       text-align: left;
-      &.current-menu-parent {
+      &.current-menu-parent,
+      &.current_page_item {
         > a {
           color: $primary !important;
 

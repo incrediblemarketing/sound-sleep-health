@@ -1,0 +1,157 @@
+.block--white_single_column {
+  padding: 150px 0;
+
+  h1 {
+    font-weight: 500;
+    @include fontSize(52);
+    line-height: em(62, 52);
+    margin-bottom: 15px;
+  }
+
+  .gform_wrapper {
+    form {
+      padding: 90px 160px 0;
+
+      ul.gform_fields {
+        li.gfield {
+          div.ginput_container {
+            input,
+            select,
+            textarea {
+              width: 100%;
+              background: #fdfdfd;
+              border: 2px solid #979797;
+              box-sizing: border-box;
+              border-radius: 5px;
+              height: 50px;
+              padding: 12px 31px !important;
+              line-height: 1em;
+
+              &:focus {
+                outline: none;
+                border: 1px solid $primary;
+              }
+            }
+            textarea {
+              height: 200px;
+              line-height: 1.3em;
+            }
+            &.ginput_container_select {
+              position: relative;
+
+              &::before {
+                content: "\f063";
+                height: 50px;
+                width: 50px;
+                border-radius: 0 5px 5px 0;
+                background: $primary;
+                color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 1;
+                font-family: $fontawesome;
+                font-size: 14px;
+                pointer-events: none;
+              }
+            }
+            select {
+              -webkit-appearance: none;
+              position: relative;
+            }
+          }
+          .gfield_checkbox {
+            margin-bottom: 6vh;
+            label {
+              display: inline-block;
+              font-size: 16px;
+              line-height: 22px;
+            }
+          }
+        }
+        .single-column-form
+          ul.gfield_checkbox
+          li
+          input[type="checkbox"]:checked
+          + label,
+        .single-column-form
+          ul.gfield_checkbox
+          li
+          input[type="checkbox"]:not(:checked)
+          + label {
+          margin-left: 19px;
+          font-size: 16px;
+          line-height: 22px;
+        }
+        /*Custom subscribe box for .single-column-form class*/
+        .single-column-form [type="checkbox"]:not(:checked),
+        [type="checkbox"]:checked {
+          position: absolute !important;
+          left: -9999px;
+        }
+        .single-column-form [type="checkbox"]:not(:checked) + label,
+        [type="checkbox"]:checked + label {
+          position: relative !important;
+          padding-left: 1em !important;
+          cursor: pointer !important;
+        }
+        .single-column-form [type="checkbox"]:not(:checked) + label:before,
+        [type="checkbox"]:checked + label:before {
+          content: "";
+          position: absolute;
+          left: -17px;
+          top: 5px;
+          width: 1.3em;
+          height: 1.3em;
+          border: 2px solid $primary;
+          background: transparent;
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+          padding: 2px;
+          font-size: 16px;
+          @include mq(md) {
+            top: 8px;
+          }
+        }
+        .single-column-form [type="checkbox"]:not(:checked) + label:after,
+        [type="checkbox"]:checked + label:after {
+          content: "";
+          height: 12px;
+          width: 12px;
+          position: absolute;
+          background: $primary;
+          top: 12px;
+          left: -13px;
+          font-size: 1.3em;
+          transition: all 0.2s;
+        }
+        /* checked mark aspect changes */
+        .single-column-form [type="checkbox"]:not(:checked) + label:after {
+          opacity: 0;
+          transform: scale(0);
+        }
+        .single-column-form [type="checkbox"]:checked + label:after {
+          opacity: 1;
+          transform: scale(1);
+        }
+        /* disabled checkbox */
+        .single-column-form
+          [type="checkbox"]:disabled:not(:checked)
+          + label:before,
+        [type="checkbox"]:disabled:checked + label:before {
+          box-shadow: none;
+          border-color: $primary;
+          background-color: #ddd;
+        }
+        .single-column-form [type="checkbox"]:disabled:checked + label:after {
+          color: #999;
+        }
+        .single-column-form [type="checkbox"]:disabled + label {
+          color: #aaa;
+        }
+      }
+    }
+  }
+}

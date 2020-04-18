@@ -22,9 +22,11 @@
 			<?php im_the_placeholder_image( 'blog_preview_thumb' ); ?>
 		</a>
 	<?php endif; ?>
-	<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf( 'Permanent Link to %s', the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a></h2>
-	<p class="post-meta"><?php echo get_the_date(); ?> by <?php echo get_the_author(); ?></p>
-	<?php the_excerpt(); ?>
-	<a class="btn--line" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf( 'Permanent Link to %s', the_title_attribute( 'echo=0' ) ); ?>">Learn more</a>
+	<div class="content--area">
+		<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf( 'Permanent Link to %s', the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a></h2>
+		<p class="post-meta"><?php echo get_the_date(); ?> by <?php echo get_the_author(); ?></p>
+		<?php the_excerpt(); ?>
+		<a class="btn--line" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf( 'Permanent Link to %s', the_title_attribute( 'echo=0' ) ); ?>">Read more</a>
+	</div>
 </article>
 

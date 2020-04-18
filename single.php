@@ -12,22 +12,25 @@
  */
 
 get_header(); ?>
-
-<div class="row justify-content-center">
-	<div class="col-12 col-lg-7">
+<section class="header--image">
+	<?php the_post_thumbnail( 'post_large' ); ?>
+</section>
+<section class="blog--single">
+	<div class="row justify-content-center">
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
-				<?php get_template_part( 'components/post' ); ?>
+					<div class="col-xl-10 col-12">
+						<p class="breadcrumb">News & Updates / <strong><?php echo get_the_title(); ?></strong></p>
+					</div>
+					<div class="col-xl-8 col-12">
+						<?php get_template_part( 'components/post' ); ?>
+					</div>
 			<?php endwhile; ?> 
-			<?php get_template_part( 'components/navigation-single' ); ?>
-		<?php else : ?>
-			<?php get_template_part( 'components/post-not-found' ); ?>
 		<?php endif; ?>
 	</div>
-	<div class="col-lg-3">
-		<?php get_sidebar( 'blog' ); ?>
-	</div>
-</div>
-
+</section>
+<section class="block block--recent_blogs">
+	<?php get_template_part( 'components/blocks/recent_blogs' ); ?>
+</section>
 <?php get_footer(); ?>

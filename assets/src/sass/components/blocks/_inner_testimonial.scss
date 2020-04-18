@@ -1,0 +1,99 @@
+.block--inner_testimonial {
+  padding: 196px 0 150px;
+
+  h1 {
+    font-style: italic;
+    font-weight: 500;
+    @include fontSize(42);
+    line-height: em(62, 42);
+  }
+
+  .top--testimonial {
+    display: flex;
+    align-items: center;
+    padding-bottom: 90px;
+
+    .count {
+      margin-right: 58px;
+      background: $white;
+      border: 1px solid #d2d2d2;
+      box-sizing: border-box;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      padding: 52px 38px;
+      text-align: center;
+
+      p {
+        font-style: italic;
+        font-weight: 500;
+        @include fontSize(124);
+        line-height: em(149, 124);
+        color: $charcoal;
+        font-family: $garamond-pro;
+        margin: 0;
+
+        &.small {
+          border-top: 1px solid #d2d2d2;
+          @include fontSize(32);
+          line-height: em(38, 32);
+          color: #979797;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+
+  .testimonial--single {
+    padding: 58px 0;
+
+    h3 {
+      font-weight: 500;
+      @include fontSize(42);
+      line-height: em(62, 42);
+      color: $primary;
+      margin-bottom: 0;
+    }
+    .post-meta {
+      font-style: italic;
+      font-weight: normal;
+      @include fontSize(16);
+      line-height: 2em;
+      color: #979797;
+      margin-bottom: 0;
+    }
+  }
+  .pagination {
+    padding-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > span,
+    > a {
+      border: 2px solid #d2d2d2;
+      box-sizing: border-box;
+      border-radius: 5px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: em(23, 18);
+      text-align: center;
+      color: #979797;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 12.5px;
+      transition: all 0.4s ease-in-out;
+
+      &:hover,
+      &.current {
+        background: $primary;
+        color: $white;
+        border-color: $primary;
+      }
+    }
+  }
+}

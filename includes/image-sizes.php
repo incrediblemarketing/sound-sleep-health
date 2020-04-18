@@ -11,14 +11,14 @@
  * @since      1.0.0
  */
 
-add_image_size( 'blog_preview_thumb', 290, 175, true );
+add_image_size( 'blog_preview_thumb', 380, 275, true );
 add_image_size( 'featured_thumb', 535, 402, true );
 add_image_size( 'parent_thumb', 715, 715, true );
 add_image_size( 'background_thumb', 1430, 569, true );
 add_image_size( 'hero_thumb', 1920, 1080, true );
 add_image_size( 'page_header_thumb', 1920, 548, true );
 add_image_size( 'blog_row_thumb', 370, 223, true );
-add_image_size( 'post_large', 1430, 796, true );
+add_image_size( 'post_large', 1920, 780, true );
 add_image_size( 'circle_thumb', 900, 900, true );
 
 /**
@@ -81,8 +81,8 @@ function im_get_all_image_sizes() {
 	global $_wp_additional_image_sizes;
 	$image_sizes = array(
 		'blog_preview_thumb' => array(
-			'width'  => 290,
-			'height' => 175,
+			'width'  => 380,
+			'height' => 275,
 		),
 		'featured_thumb'     => array(
 			'width'  => 535,
@@ -101,8 +101,8 @@ function im_get_all_image_sizes() {
 			'height' => 223,
 		),
 		'post_large'         => array(
-			'width'  => 1430,
-			'height' => 796,
+			'width'  => 1920,
+			'height' => 780,
 		),
 	);
 	return array_merge( $image_sizes, $_wp_additional_image_sizes );

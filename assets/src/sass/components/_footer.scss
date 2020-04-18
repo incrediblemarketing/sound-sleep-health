@@ -128,4 +128,74 @@ footer {
       }
     }
   }
+
+  .orange--area {
+    padding: 99px 375px 148px;
+    margin-bottom: 65px;
+    background: $primary;
+    color: $white;
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10vh;
+
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          color: $white;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            background: $white;
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .business--info {
+      display: flex;
+
+      .single--business {
+        width: 50%;
+
+        &:first-child {
+          padding-right: 50px;
+        }
+        &:last-child {
+          padding-left: 50px;
+        }
+
+        iframe {
+          width: 100%;
+          height: 472px;
+          margin-bottom: 25px;
+        }
+
+        .directions {
+          a {
+            color: $white;
+            text-decoration: underline;
+          }
+        }
+
+        p {
+          padding-left: 57px;
+          position: relative;
+          max-width: 380px;
+          i {
+            position: absolute;
+            top: 11px;
+            left: 22px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -60,4 +60,37 @@
     opacity: 0.5;
     z-index: 0;
   }
+
+  &.blog--header {
+    background: $white;
+    .image__holder {
+      img {
+        opacity: 1;
+      }
+    }
+    .shadow--box {
+      background: #f0f5ff;
+    }
+
+    .btn--line-orange {
+      color: $primary;
+      padding-right: 30vw;
+
+      &::before {
+        background: $primary;
+      }
+    }
+    p {
+      color: $charcoal;
+    }
+
+    .post-meta {
+      font-style: italic;
+      font-weight: normal;
+      @include fontSize(16);
+      line-height: 2em;
+      color: #979797;
+      margin-bottom: 0;
+    }
+  }
 }
