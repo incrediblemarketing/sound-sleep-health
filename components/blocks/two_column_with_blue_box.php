@@ -17,10 +17,10 @@ $content_2 = get_sub_field( 'content_2' );
 <div class="box--blue"></div>
 <div class="container-fluid">
 	<div class="row justify-content-center">
-		<div class="col-xxl-5">
+		<div class="col-xl-5 col-lg-6 ">
 			<?php echo $content; ?>
 		</div>
-		<div class="col-xxl-5 content-2">
+		<div class="col-xl-5 col-lg-6 content-2">
 			<?php echo $content_2; ?>
 		</div>
 	</div>

@@ -20,7 +20,7 @@ $bottom_image = get_sub_field( 'bottom_image' );
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xxl-6 column-1">
+		<div class="col-xl-6 col-lg-6 column-1">
 			<?php if ( ! empty( $top_image ) ) : ?>
 				<div class="image__holder image--top">
 					<img src="<?php echo esc_url( $top_image['sizes']['large'] ); ?>" alt="<?php echo esc_attr( $top_image['alt'] ); ?>" />
@@ -32,7 +32,7 @@ $bottom_image = get_sub_field( 'bottom_image' );
 				</div>
 			<?php endif; ?>
 		</div>
-		<div class="col-xxl-5 column-2">
+		<div class="col-xl-5 col-lg-6 column-2">
 			<?php echo $content; ?>
 			<a href="<?php echo esc_url( $content_link ); ?>" class="btn--circle"><strong class="line"></strong>Learn more</a>
 		</div>

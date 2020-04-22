@@ -25,7 +25,7 @@ $image         = get_sub_field( 'image' );
 <?php endif; ?>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xxl-7 content--area">
+		<div class="col-xxl-7 col-xl-8 col-md-12 content--area">
 			<h4><?php echo esc_attr( $header ); ?></h4>
 			<h2><?php echo esc_attr( $content_title ); ?></h2>
 			<div class="content--box">

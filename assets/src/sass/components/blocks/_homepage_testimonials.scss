@@ -1,51 +1,89 @@
 .block--homepage_testimonials {
   position: relative;
-  padding-top: 408px;
   z-index: 0;
   color: $white;
+
+  @include mq(md) {
+    padding-top: 408px;
+  }
 
   .image__holder {
     @include absolute_cover();
     z-index: -1;
+    position: relative;
+
+    @include mq(md) {
+      position: absolute;
+    }
     img {
       @include absolute_cover();
+      position: relative;
       min-width: 100%;
       min-height: 100%;
       object-fit: cover;
+
+      @include mq(md) {
+        position: absolute;
+      }
     }
   }
 
   .content--area {
-    padding: 0;
+    padding: 50px 15px 0;
+
+    @include mq(md) {
+      padding: 0;
+    }
 
     h2,
     h4 {
-      padding-left: 8vw;
+      @include mq(md) {
+        padding-left: 8vw;
+      }
     }
 
     h4 {
       @extend h5;
-      color: $white;
+
+      @include mq(md) {
+        color: $white;
+      }
     }
 
     h2 {
       font-style: italic;
       font-weight: 500;
-      @include fontSize(124);
       line-height: em(149, 124);
       letter-spacing: 1.85vw;
-      color: $white;
+      @include fontSize(75);
+
+      @include mq(md) {
+        @include fontSize(124);
+        color: $white;
+      }
     }
   }
 
   .content--box {
     padding: 0;
     background: $white;
-    width: calc(100% + 3vw);
+    width: 100%;
     color: $charcoal;
 
+    @include mq(xl) {
+      width: calc(100% + 3vw);
+    }
+
     .testimonial--area {
-      padding: 200px 230px;
+      padding: 35px 0;
+
+      @include mq(md) {
+        padding: 10vh 12vw;
+      }
+
+      @include mq(xl) {
+        padding: 18vh 12vw;
+      }
 
       .quote--area {
         padding-left: 53px;
@@ -74,11 +112,33 @@
     .review--box {
       display: flex;
       border-top: 1px solid #d2d2d2;
+      margin: 0 -15px;
+      flex-wrap: wrap;
+
+      @include mq(md) {
+        margin: unset;
+        flex-wrap: unset;
+      }
 
       .social--box {
-        padding: 60px 55px;
+        width: 50%;
+        padding: 45px 20px;
         border-left: 1px solid #d2d2d2;
+        border-top: 1px solid #d2d2d2;
         text-align: center;
+
+        @include mq(md) {
+          width: 25%;
+          border-top: unset;
+        }
+
+        @include mq(lg) {
+          padding: 45px 35px;
+        }
+
+        @include mq(xxl) {
+          padding: 60px 55px;
+        }
 
         a {
           display: flex;
@@ -93,18 +153,27 @@
             font-family: $nunito;
             font-style: normal;
             font-weight: normal;
-            @include fontSize(32);
+            @include fontSize(27);
             line-height: 1em;
             color: $charcoal;
             margin-bottom: 25px;
             display: flex;
             justify-content: center;
             text-align: center;
+
+            @include mq(xxl) {
+              @include fontSize(32);
+            }
           }
 
           .stars {
             margin-top: auto;
-            margin-bottom: 23px;
+            width: 135px;
+            margin: 0 auto 23px;
+
+            @include mq(xxl) {
+              width: 185px;
+            }
           }
 
           p {

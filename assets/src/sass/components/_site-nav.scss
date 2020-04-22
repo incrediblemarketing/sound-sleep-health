@@ -6,7 +6,7 @@
   );
   display: flex;
   justify-content: space-between;
-  padding: 58px 210px 40px;
+  padding: 15px;
   align-items: center;
   position: fixed;
   left: 0;
@@ -14,6 +14,16 @@
   width: 100%;
   z-index: 99;
   transition: all 0.5s ease-in-out;
+
+  @include mq(md) {
+    padding: 15px 25px;
+  }
+  @include mq(xl) {
+    padding: 25px 90px;
+  }
+  @include mq(xxl) {
+    padding: 4vh 11vw 40px;
+  }
 
   body:not(.home):not(.blog):not(.single-post):not(.page) & {
     background: transparent;
@@ -57,7 +67,7 @@
   .menu {
     padding: 0;
     margin: 0;
-    display: flex;
+    display: none;
     align-items: center;
     list-style: none;
     position: absolute;
@@ -65,17 +75,28 @@
     left: 50%;
     transform: translateX(-50%);
     transition: all 0.5s ease-in-out;
+    width: 100%;
+    justify-content: center;
+
+    @include mq(lg) {
+      display: flex;
+    }
 
     > li {
       font-style: normal;
       font-weight: normal;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.388em;
       text-align: center;
       margin: 0 5px;
       display: block;
       position: relative;
       text-align: left;
+
+      @include mq(lg) {
+        font-size: 18px;
+      }
+
       &.current-menu-parent,
       &.current_page_item {
         > a {
@@ -90,12 +111,17 @@
       > a {
         color: $charcoal;
         display: block;
-        padding: 15px;
+        padding: 15px 10px;
+
+        @include mq(lg) {
+          padding: 15px;
+        }
 
         &::before {
           content: "";
           display: block;
           width: 100px;
+          max-width: 90%;
           height: 1px;
           background: $primary;
           position: absolute;
@@ -160,20 +186,48 @@
     }
   }
 
+  .ssh-logo {
+    width: auto;
+    height: 30px;
+
+    @include mq(md) {
+      height: 40px;
+    }
+
+    @include mq(xxl) {
+      height: 52px;
+    }
+  }
+
   .header--right {
     display: flex;
     align-items: center;
+    margin-left: auto;
 
     .line {
       height: 50px;
       width: 1px;
       background: #dcdcdc;
+      display: none;
+
+      @include mq(lg) {
+        display: block;
+      }
     }
 
     .text {
-      margin-right: 40px;
+      margin-right: 25px;
       font-size: 30px;
       color: $charcoal;
+      display: none;
+
+      @include mq(lg) {
+        display: block;
+      }
+
+      @include mq(xl) {
+        margin-right: 40px;
+      }
     }
 
     .call {
@@ -182,19 +236,55 @@
       font-size: 18px;
       line-height: 1.388em;
       font-weight: 800;
-      margin-left: 30px;
-      margin-right: 101px;
       color: $charcoal;
+      white-space: nowrap;
+      margin-left: auto;
+
+      @include mq(md) {
+        margin-left: 25px;
+      }
+      @include mq(lg) {
+        margin-right: 25px;
+      }
+
+      @include mq(xl) {
+        margin-left: 30px;
+        margin-right: 101px;
+      }
 
       strong {
         font-size: 16px;
         line-height: 1.375em;
         color: $gray-font;
         text-transform: uppercase;
+        display: none;
+
+        @include mq(md) {
+          display: block;
+        }
+      }
+
+      span {
+        display: none;
+
+        @include mq(md) {
+          display: block;
+        }
       }
 
       i {
-        display: none;
+        color: $white;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary;
+        border-radius: 100em;
+        font-size: 15px;
+        @include mq(md) {
+          display: none;
+        }
       }
     }
 
@@ -205,11 +295,39 @@
       color: $charcoal;
       font-weight: 800;
       margin-left: 31px;
+      display: none;
+
+      @include mq(lg) {
+        display: block;
+      }
     }
   }
 
   button[data-toggle="menu"] {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 16px;
+    width: 22px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-left: 20px;
+
+    @include mq(lg) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: $charcoal;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .sub-menu {
@@ -225,9 +343,25 @@
   }
 
   &.sticky {
-    padding: 0 25px;
+    padding: 13px 15px;
     background: rgba($white, 0.9);
     box-shadow: rgba($black, 0.1) 4px 4px 10px;
+
+    @include mq(lg) {
+      padding: 0 15px;
+    }
+    @include mq(xl) {
+      padding: 0 25px;
+    }
+
+    .ssh-logo {
+      @include mq(lg) {
+        height: 30px;
+      }
+      @include mq(xl) {
+        height: 40px;
+      }
+    }
 
     .menu {
       position: relative;
@@ -241,6 +375,17 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          font-size: 15px;
+          padding: 0 3px;
+
+          @include mq(xl) {
+            font-size: 16px;
+            padding: 0 10px;
+          }
+          @include mq(xxl) {
+            font-size: 18px;
+            padding: 0 15px;
+          }
 
           &::before {
             bottom: 15px;
@@ -253,10 +398,30 @@
     .text,
     .line {
       display: none;
+
+      @include mq(lg) {
+        display: none;
+      }
     }
 
     .call {
       margin-right: 0;
+      @include mq(lg) {
+        margin-right: 0;
+        margin-left: 15px;
+      }
+      @include mq(xl) {
+        margin-right: 0;
+        margin-left: 15px;
+      }
+
+      span,
+      strong {
+        font-size: 15px;
+        @include mq(xxl) {
+          font-size: 18px;
+        }
+      }
     }
   }
 }

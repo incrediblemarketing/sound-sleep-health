@@ -23,7 +23,7 @@ $image   = get_sub_field( 'background_image' );
 <div class="box--shadow"></div>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xxl-5 offset-xl-1 col-xl-6 col-lg-7">
+		<div class="col-xxl-5 offset-xl-1 col-xl-6 col-lg-7 col-md-10">
 			<?php echo $content; ?>
 			<a class="btn-primary" href="/contact/">Request an appointment today!</a>
 		</div>

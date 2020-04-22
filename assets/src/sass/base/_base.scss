@@ -1,6 +1,9 @@
 html {
   background: white;
-  font-size: 18px;
+  font-size: 16px;
+  @include mq(xl) {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -36,9 +39,13 @@ h5 {
 h1 {
   font-style: italic;
   font-weight: 500;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1.138em;
   color: $primary;
+
+  @include mq(xl) {
+    font-size: 4rem;
+  }
 }
 
 h2 {

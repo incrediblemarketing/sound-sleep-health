@@ -3,12 +3,16 @@
   color: $primary;
   font-style: italic;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.4rem;
   line-height: 1.19em;
   font-family: $garamond-pro;
   position: relative;
   left: 0;
   transition: left 0.4s ease-in-out;
+
+  @include mq(md) {
+    font-size: 2rem;
+  }
 
   &:hover {
     background: transparent;
@@ -19,8 +23,8 @@
 
 .btn--circle {
   display: flex;
-  height: 250px;
-  width: 250px;
+  height: 180px;
+  width: 180px;
   align-items: center;
   justify-content: center;
   background: rgba(255, 80, 0, 0.0001);
@@ -32,6 +36,12 @@
   text-align: center;
   font-family: $garamond-pro;
   transition: all 0.4s ease-in-out;
+
+  @include mq(md) {
+    height: 250px;
+    width: 250px;
+  }
+
   &:hover {
     background: $white;
     color: $primary;

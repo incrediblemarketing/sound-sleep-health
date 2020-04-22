@@ -1,7 +1,11 @@
 .block--homepage_process {
-  padding: 200px 0;
+  padding: 100px 0;
   color: $white;
   z-index: 0;
+
+  @include mq(xl) {
+    padding: 200px 0;
+  }
 
   .image__holder {
     @include absolute_cover();
@@ -27,11 +31,19 @@
   h2 {
     font-style: italic;
     font-weight: 500;
-    @include fontSize(124);
     line-height: em(149, 124);
     letter-spacing: 1.85vw;
-    margin-bottom: 89px;
+    margin-bottom: 45px;
     color: $white;
+    @include fontSize(75);
+
+    @include mq(md) {
+      @include fontSize(124);
+    }
+
+    @include mq(xl) {
+      margin-bottom: 89px;
+    }
   }
 
   .grid--content {
@@ -45,14 +57,23 @@
     }
 
     .content--single {
-      padding-left: 150px;
+      padding-left: 0;
       position: relative;
 
+      @include mq(md) {
+        padding-left: 150px;
+      }
+
       .icon {
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
-        margin: 38px;
+        margin: 0 0 25px;
+
+        @include mq(md) {
+          margin: 38px;
+          position: absolute;
+        }
       }
 
       h3 {

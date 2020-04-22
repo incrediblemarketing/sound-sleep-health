@@ -1,25 +1,39 @@
 .block--two_column_with_blue_box {
-  margin: 108px 0 296px;
+  margin: 100px 0;
   position: relative;
-  padding: 45px 0 61px;
+  padding: 45px 15px;
+
+  @include mq(lg) {
+    margin: 108px 0 296px;
+    padding: 45px 0 61px;
+  }
 
   .box--blue {
     background: $light-blue;
     display: block;
-    width: calc(100% - 50px);
-    left: 50px;
+    width: calc(100% - 15px);
+    left: 15px;
     top: 0;
     height: 100%;
     position: absolute;
+
+    @include mq(lg) {
+      width: calc(100% - 50px);
+      left: 50px;
+    }
   }
 
   h2 {
     font-style: italic;
     font-weight: 500;
-    @include fontSize(124);
     line-height: em(149, 124);
     letter-spacing: 1.85vw;
     color: $primary;
+    @include fontSize(75);
+
+    @include mq(md) {
+      @include fontSize(124);
+    }
 
     strong {
       display: block;
@@ -32,25 +46,39 @@
   h3 {
     font-style: italic;
     font-weight: 500;
-    @include fontSize(72);
+    @include fontSize(52);
     line-height: em(82, 72);
     color: $primary;
-    padding-right: 4vw;
     position: relative;
+
+    @include mq(lg) {
+      padding-right: 4vw;
+    }
+
+    @include mq(xxl) {
+      @include fontSize(72);
+    }
 
     &::before {
       content: "";
-      display: block;
+      display: none;
       width: 25px;
       height: 4px;
       background: $primary;
       position: absolute;
       right: 103%;
       top: 30px;
+
+      @include mq(lg) {
+        display: block;
+      }
     }
   }
 
   .content-2 {
-    padding: 30px 45px 0;
+    padding-top: 35px;
+    @include mq(lg) {
+      padding: 30px 45px 0;
+    }
   }
 }
