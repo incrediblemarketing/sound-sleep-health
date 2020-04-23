@@ -1,0 +1,40 @@
+.block--location {
+  padding: 10vw 0;
+  .single--business {
+    display: block;
+
+    @include mq(md) {
+      display: flex;
+    }
+
+    iframe {
+      max-width: 100%;
+      margin-bottom: 35px;
+      width: 100%;
+
+      @include mq(md) {
+        margin-bottom: 0;
+        margin-right: 5vw;
+        max-width: 50%;
+      }
+    }
+
+    .directions {
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      padding-left: 30px;
+      position: relative;
+
+      i {
+        position: absolute;
+        top: 11px;
+        left: 0;
+        font-size: 16px;
+      }
+    }
+  }
+}

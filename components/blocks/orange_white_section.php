@@ -38,7 +38,7 @@ if ( ! empty( $content ) && ! empty( $content_2 ) ) {
 					<img src="<?php echo esc_url( $image['sizes']['circle_thumb'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
 				</div>
 				<?php else : ?>
-					<div class="image__holder">
+					<div class="image__holder image--bottom">
 						<?php echo im_the_placeholder_image( 'circle_thumb' ); ?>
 					</div>
 			<?php endif; ?>

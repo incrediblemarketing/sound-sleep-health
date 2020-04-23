@@ -2596,6 +2596,94 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5ea1fa9bc0e01": {
+                    "key": "layout_5ea1fa9bc0e01",
+                    "name": "location",
+                    "label": "Location",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ea1fa9bc0e02",
+                            "label": "Block Options",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5ea1fa9bc0e03",
+                            "label": "Block Options",
+                            "name": "block_options",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b5b6ae092e59"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5ea1fa9bc0e04",
+                            "label": "Content",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5ea1fa9bc0e05",
+                            "label": "Single Location",
+                            "name": "single_location",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "seattle": "Seattle",
+                                "kirkland": "Kirkland"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5e97c39504ca5": {
                     "key": "layout_5e97c39504ca5",
                     "name": "faqs",
@@ -2885,5 +2973,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1587162616
+    "modified": 1587673883
 }

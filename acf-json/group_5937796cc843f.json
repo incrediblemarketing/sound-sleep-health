@@ -491,6 +491,25 @@
             "button_label": "",
             "sub_fields": [
                 {
+                    "key": "field_5ea1fccb49b58",
+                    "label": "Business Location Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "Do Not Change",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5e97d6a8b2897",
                     "label": "Business Street Address",
                     "name": "business_street_address",
@@ -655,5 +674,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1587174473
+    "modified": 1587674494
 }
