@@ -1,5 +1,9 @@
 .blog--roll {
-  padding: 75px 45px 150px;
+  padding: 90px 15px;
+
+  @include mq(md) {
+    padding: 75px 45px 150px;
+  }
 
   .breadcrumb {
     font-family: $garamond-pro;
@@ -15,14 +19,36 @@
 
   article {
     display: flex;
-    margin-bottom: 140px;
-    padding-bottom: 67px;
+    margin-bottom: 60px;
+    flex-direction: column;
+
+    @include mq(md) {
+      padding-bottom: 67px;
+      margin-bottom: 0px;
+      flex-direction: row;
+    }
+    @include mq(lg) {
+      padding-bottom: 67px;
+      margin-bottom: 140px;
+    }
 
     img {
-      margin-bottom: 25px;
       border-radius: 6px;
+      margin: 0 auto 25px;
+
+      @include mq($until: md) {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        width: 380px;
+      }
 
       @include mq(md) {
+        margin-right: 25px;
+        margin-left: 0;
+      }
+
+      @include mq(lg) {
         margin-right: 100px;
       }
     }
@@ -62,6 +88,10 @@
 }
 
 .blog--single {
+  padding: 0 15px;
+  @include mq(xl) {
+    padding: 0;
+  }
   .breadcrumb {
     padding-top: 75px;
     font-family: $garamond-pro;
@@ -70,10 +100,15 @@
     @include fontSize(24);
     line-height: em(29, 24);
     color: $charcoal;
-    margin-bottom: 54px;
-    padding-bottom: 46px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
     border-bottom: 1px solid #d2d2d2;
-    margin-left: 110px;
+
+    @include mq(xl) {
+      margin-bottom: 54px;
+      padding-bottom: 46px;
+      margin-left: 110px;
+    }
 
     strong {
       color: $primary;
@@ -90,6 +125,10 @@
   }
 
   article {
-    padding: 50px 0 150px;
+    padding: 0px 0 100px;
+
+    @include mq(lg) {
+      padding: 50px 0 150px;
+    }
   }
 }

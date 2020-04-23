@@ -32,10 +32,10 @@ $mostrecent = new WP_Query( $args );
 					<?php im_the_placeholder_image( 'hero_thumb' ); ?>
 				</div>
 			<?php endif; ?>
-			<div class="shadow--box"></div>
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-xl-5 offset-xl-1 column-1">
+					<div class="col-xxl-5 offset-xl-1 col-xl-6 col-lg-8 col-md-10 column-1">
+						<div class="shadow--box"></div>
 						<h5>Featured Article</h5>
 						<h1><?php echo get_the_title(); ?></h1>
 						<p class="post-meta"><?php echo get_the_date(); ?> by <?php echo get_the_author(); ?></p>

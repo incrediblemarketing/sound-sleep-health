@@ -2,18 +2,37 @@
   .orange--bg {
     background: $primary;
     color: $white;
-    padding: 138px 0;
-    min-height: 700px;
+    padding: 100px 15px;
+
+    @include mq(xl) {
+      min-height: 700px;
+    }
+
+    @include mq(xl) {
+      padding: 138px 0;
+    }
 
     &.large--padding {
-      padding-bottom: 356px;
+      padding-bottom: 10vh;
+
+      @include mq(xl) {
+        padding-bottom: 24vh;
+      }
+
+      @include mq(xxl) {
+        padding-bottom: 32vh;
+      }
 
       .column-1 {
         padding-right: 4vw;
       }
 
       .column-2 {
-        padding-top: 92px;
+        padding-top: 35px;
+
+        @include mq(lg) {
+          padding-top: 92px;
+        }
       }
     }
 
@@ -31,6 +50,10 @@
         position: absolute;
         top: 25px;
         right: 103%;
+
+        @include mq($until: xl) {
+          display: none;
+        }
       }
     }
 
@@ -40,8 +63,12 @@
       list-style: none;
 
       &.two--columns {
-        column-count: 2;
+        column-count: 1;
         column-gap: 1vw;
+
+        @include mq(md) {
+          column-count: 2;
+        }
       }
 
       li {
@@ -68,18 +95,42 @@
     img {
       max-width: 100%;
       height: auto;
-      padding: 50px;
+      padding: 20px;
       background: transparent;
-      border: 1px solid $white;
+      border: 1px solid $primary;
       border-radius: 100em;
+
+      @include mq(lg) {
+        border: 1px solid $white;
+      }
+
+      @include mq(xl) {
+        padding: 50px;
+      }
     }
   }
   .column-3 {
-    padding-left: 60px;
+    padding-left: 15px;
+
+    @include mq(lg) {
+      padding-left: 60px;
+    }
 
     .image--bottom {
-      transform: translateY(-592px);
-      margin-bottom: -492px;
+      transform: unset;
+      margin-bottom: 35px;
+      margin-top: 35px;
+
+      @include mq(md) {
+        margin-top: 80px;
+        margin-bottom: 80px;
+      }
+
+      @include mq(lg) {
+        margin-top: unset;
+        transform: translateY(-30vw);
+        margin-bottom: -26vw;
+      }
     }
   }
 }

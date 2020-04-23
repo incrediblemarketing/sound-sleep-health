@@ -1,18 +1,35 @@
 .block--homepage_insurance {
+  .logo--area {
+    @include mq($until: xxl) {
+      padding: 0;
+    }
+  }
   .logo--grid {
     display: grid;
-    width: calc(100% + 28px);
-    margin-left: -28px;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
     grid-template-areas:
-      ". . . . ."
-      ". a b c ."
-      ". d e f ."
-      ". g h i ."
-      ". . . . .";
+      "a b c"
+      "d e f"
+      "g h i";
     align-items: center;
+
+    @include mq(md) {
+      grid-template-areas:
+        ". . . . ."
+        ". a b c ."
+        ". d e f ."
+        ". g h i ."
+        ". . . . .";
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+    }
+
+    @include mq(xxl) {
+      width: calc(100% + 28px);
+      margin-left: -28px;
+    }
 
     .item-1 {
       grid-area: a;
@@ -46,8 +63,21 @@
       border-left: 1px solid #d2d2d2;
       border-top: 1px solid #d2d2d2;
 
-      height: 225px;
-      width: 225px;
+      width: 100%;
+      height: 150px;
+
+      @include mq($until: md) {
+        display: none;
+      }
+
+      @include mq(md) {
+        height: 225px;
+      }
+
+      @include mq(xxl) {
+        width: 225px;
+      }
+
       &:nth-of-type(16),
       &:nth-of-type(18),
       &:nth-of-type(20) {
@@ -68,23 +98,46 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 225px;
-      width: 225px;
+      width: 100%;
+      height: 150px;
+
+      @include mq(md) {
+        height: 225px;
+      }
+
+      @include mq(xxl) {
+        width: 225px;
+      }
 
       &:nth-child(3n) {
         border-right: 1px solid $primary;
+        @include mq($until: md) {
+          border-right: none;
+        }
       }
 
       &:nth-child(n + 7) {
         border-bottom: 1px solid $primary;
+      }
+
+      img {
+        max-width: 80%;
+        height: auto;
       }
     }
   }
 
   .content--area {
     align-self: center;
-    padding-left: 39px;
-    padding-right: 65px;
+    padding: 90px 15px;
+
+    @include mq(md) {
+      padding: 90px;
+    }
+
+    @include mq(xl) {
+      padding: 0 65px 0 39px;
+    }
 
     h3 {
       color: $primary;
@@ -104,6 +157,10 @@
         top: 25px;
         right: 103%;
         background: $primary;
+
+        @include mq($until: md) {
+          display: none;
+        }
       }
     }
     .btn--orange {
@@ -117,9 +174,13 @@
         right: 90%;
         top: 50%;
         transform: translateY(-50%);
-        width: 40vw;
+        width: 70vw;
         height: 2px;
         background: $primary;
+
+        @include mq(xl) {
+          width: 40vw;
+        }
       }
     }
   }

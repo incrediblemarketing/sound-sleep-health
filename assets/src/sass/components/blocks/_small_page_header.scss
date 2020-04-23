@@ -1,3 +1,8 @@
-.block-small_page_header {
-  
+.block--small_page_header {
+  .image__holder {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }

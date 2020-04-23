@@ -1,7 +1,14 @@
 .block--recent_blogs {
   background: $primary;
   color: $white;
-  padding: 60px 110px;
+  padding: 80px 0;
+
+  @include mq(md) {
+    padding: 60px 15px;
+  }
+  @include mq(lg) {
+    padding: 60px 110px;
+  }
 
   h2,
   h5 {
@@ -12,18 +19,31 @@
   h2 {
     font-style: italic;
     font-weight: 500;
-    @include fontSize(124);
     line-height: em(149, 124);
-    letter-spacing: 1.85vw;
+    letter-spacing: 0.5vw;
     margin-bottom: 34px;
+    @include fontSize(65);
+
+    @include mq(md) {
+      letter-spacing: 1.5vw;
+      @include fontSize(100);
+    }
+    @include mq(lg) {
+      @include fontSize(114);
+    }
+    @include mq(xl) {
+      letter-spacing: 1.85vw;
+      @include fontSize(124);
+    }
   }
 
   .grid--articles {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 100px;
+    grid-gap: 45px;
 
     @include mq(md) {
+      grid-gap: 100px;
       grid-template-columns: 1fr 1fr;
     }
     @include mq(xl) {
@@ -33,15 +53,22 @@
     h2 {
       text-align: left;
       margin-bottom: 0;
-      height: 100px;
+
+      @include mq(md) {
+        height: 100px;
+      }
       a {
         font-style: italic;
         font-weight: 500;
-        @include fontSize(42);
+        @include fontSize(35);
         line-height: em(50, 42);
         color: $white;
         letter-spacing: 0;
         text-align: left;
+
+        @include mq(xxl) {
+          @include fontSize(42);
+        }
       }
     }
 
@@ -51,6 +78,12 @@
 
     p {
       color: $white;
+    }
+
+    .content--area {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
   }
 

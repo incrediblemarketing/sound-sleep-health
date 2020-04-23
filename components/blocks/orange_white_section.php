@@ -22,17 +22,17 @@ if ( ! empty( $content ) && ! empty( $content_2 ) ) {
 
 <div class="container-fluid orange--bg <?php echo esc_attr( $padding ); ?>">
 	<div class="row">
-		<div class="col-xl-5 offset-xl-1 column-1">
+		<div class="col-xl-5 offset-xl-1 col-lg-6 column-1">
 			<?php echo $content; ?>
 		</div>
-		<div class="col-xl-5 column-2">
+		<div class="col-xl-5 col-lg-6 column-2">
 			<?php echo $content_2; ?>
 		</div>
 	</div>
 </div>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xxl-6 column-3">
+		<div class="col-lg-6 column-3">
 			<?php if ( ! empty( $image ) ) : ?>
 				<div class="image__holder image--bottom">
 					<img src="<?php echo esc_url( $image['sizes']['circle_thumb'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />

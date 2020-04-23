@@ -34,7 +34,7 @@ $image   = get_sub_field( 'background_image' );
 		</div>
 	<?php endif; ?>
 	<div class="row">
-		<div class="col-xl-5 offset-xl-1 column-1">
+		<div class="col-xxl-5 col-xl-6 col-lg-7 col-md-10 offset-md-1 column-1">
 			<?php echo $content; ?>
 		</div>
 	</div>

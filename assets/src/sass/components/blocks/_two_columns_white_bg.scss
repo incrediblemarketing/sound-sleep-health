@@ -1,11 +1,21 @@
 .block--two_columns_white_bg {
-  padding: 90px 0 200px;
+  padding: 80px 0;
+
+  @include mq(xl) {
+    padding: 90px 0 200px;
+  }
 
   .column-1 {
-    padding-right: 3vw;
+    margin-bottom: 35px;
+    @include mq(xl) {
+      margin-bottom: 0;
+      padding-right: 3vw;
+    }
   }
   .column-2 {
-    padding-left: 3vw;
+    @include mq(xl) {
+      padding-left: 3vw;
+    }
   }
 
   h2 {
@@ -21,26 +31,41 @@
       position: absolute;
       top: 25px;
       right: 103%;
+
+      @include mq($until: md) {
+        display: none;
+      }
     }
 
     &.large {
       font-style: italic;
       font-weight: 500;
-      @include fontSize(72);
+      @include fontSize(46);
       line-height: 1em;
-      letter-spacing: 12px;
-      margin-bottom: 100px;
+      letter-spacing: 6px;
+      margin-bottom: 40px;
+
+      @include mq(lg) {
+        margin-bottom: 100px;
+        letter-spacing: 12px;
+        @include fontSize(72);
+      }
 
       strong {
         display: flex;
         font-weight: 500;
-        @include fontSize(56);
+        @include fontSize(46);
         line-height: em(72, 56);
-        letter-spacing: 9.33333px;
+        letter-spacing: 4.33333px;
         color: #bebebe;
         position: relative;
         white-space: nowrap;
         align-items: flex-end;
+
+        @include mq(lg) {
+          @include fontSize(56);
+          letter-spacing: 9.33333px;
+        }
 
         &::after {
           content: "";
@@ -63,10 +88,14 @@
   h3 {
     font-style: italic;
     font-weight: 500;
-    @include fontSize(52);
+    @include fontSize(42);
     line-height: em(62, 52);
     color: $primary;
     margin-bottom: 35px;
+
+    @include mq(lg) {
+      @include fontSize(52);
+    }
 
     &.type-1 {
       &::before {
@@ -116,6 +145,10 @@
         right: 0;
         top: 0;
         transform: translateY(-20%);
+
+        @include mq($until: lg) {
+          display: none;
+        }
       }
     }
   }
@@ -124,8 +157,12 @@
     padding: 0;
     margin: 0 0 35px;
     list-style: none;
-    column-count: 2;
+    column-count: 1;
     column-gap: 1vw;
+
+    @include mq(md) {
+      column-count: 2;
+    }
 
     li {
       padding-left: 19px;

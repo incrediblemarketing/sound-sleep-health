@@ -1,16 +1,41 @@
 .block--white_single_column {
-  padding: 150px 0;
+  padding: 70px 0;
+
+  @include mq(lg) {
+    padding: 100px 0;
+  }
+
+  @include mq(xxl) {
+    padding: 150px 0;
+  }
 
   h1 {
     font-weight: 500;
-    @include fontSize(52);
     line-height: em(62, 52);
     margin-bottom: 15px;
+    @include fontSize(36);
+
+    @include mq(md) {
+      @include fontSize(52);
+    }
   }
 
   .gform_wrapper {
     form {
-      padding: 90px 160px 0;
+      padding: 40px 0 0;
+
+      @include mq(md) {
+        padding: 60px 60px 0;
+      }
+      @include mq(lg) {
+        padding: 90px 160px 0;
+      }
+
+      .btn--primary {
+        @include mq($until: md) {
+          width: 100%;
+        }
+      }
 
       ul.gform_fields {
         li.gfield {
@@ -122,10 +147,14 @@
           width: 12px;
           position: absolute;
           background: $primary;
-          top: 12px;
+          top: 10px;
           left: -13px;
           font-size: 1.3em;
           transition: all 0.2s;
+
+          @include mq(md) {
+            top: 12px;
+          }
         }
         /* checked mark aspect changes */
         .single-column-form [type="checkbox"]:not(:checked) + label:after {

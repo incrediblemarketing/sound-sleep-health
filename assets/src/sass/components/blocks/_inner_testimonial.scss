@@ -1,5 +1,12 @@
 .block--inner_testimonial {
-  padding: 196px 0 150px;
+  padding: 70px 0 60px;
+
+  @include mq(xl) {
+    padding: 120px 0 90px;
+  }
+  @include mq(xxl) {
+    padding: 196px 0 150px;
+  }
 
   h1 {
     font-style: italic;
@@ -11,10 +18,15 @@
   .top--testimonial {
     display: flex;
     align-items: center;
-    padding-bottom: 90px;
+    padding-bottom: 50px;
+    flex-direction: column;
+
+    @include mq(md) {
+      padding-bottom: 90px;
+      flex-direction: row;
+    }
 
     .count {
-      margin-right: 58px;
       background: $white;
       border: 1px solid #d2d2d2;
       box-sizing: border-box;
@@ -23,6 +35,13 @@
       flex-direction: column;
       padding: 52px 38px;
       text-align: center;
+      margin: 0 auto 25px;
+
+      @include mq(md) {
+        margin-right: 58px;
+        margin-left: 0;
+        margin-bottom: 0;
+      }
 
       p {
         font-style: italic;
@@ -45,7 +64,11 @@
   }
 
   .testimonial--single {
-    padding: 58px 0;
+    padding: 25px 0;
+
+    @include mq(xl) {
+      padding: 58px 0;
+    }
 
     h3 {
       font-weight: 500;
@@ -85,7 +108,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 12.5px;
+      margin: 0 12.5px 12.5px;
       transition: all 0.4s ease-in-out;
 
       &:hover,

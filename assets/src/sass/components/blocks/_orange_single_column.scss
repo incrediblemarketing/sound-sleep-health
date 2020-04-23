@@ -1,26 +1,49 @@
 .block--orange_single_column {
-  padding: 174px 0 94px;
+  padding: 80px 0;
   text-align: center;
   background: $primary;
   color: $white;
   z-index: 0;
 
+  @include mq(md) {
+    padding: 150px 0 80px;
+  }
+
+  @include mq(xl) {
+    padding: 174px 0 94px;
+  }
+
   p {
     font-family: $garamond-pro;
     font-style: italic;
     font-weight: 500;
-    @include fontSize(52);
+    @include fontSize(28);
     line-height: em(62, 52);
     letter-spacing: 2.16667px;
     margin-bottom: 45px;
+
+    @include mq(md) {
+      @include fontSize(42);
+    }
+
+    @include mq(xl) {
+      @include fontSize(52);
+    }
   }
 
   .line {
-    height: 200px;
+    height: 25px;
     width: 2px;
     background: $white;
     margin: 7vh auto 0;
     animation: scrollDown 4s infinite ease-out;
+
+    @include mq(md) {
+      height: 100px;
+    }
+    @include mq(xl) {
+      height: 200px;
+    }
   }
 
   .lines--area {
@@ -29,7 +52,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 0 110px;
+    padding: 0 5vw;
     display: flex;
     justify-content: space-between;
     z-index: -1;

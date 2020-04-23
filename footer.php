@@ -20,7 +20,6 @@
 
 <footer class="footer">
 	<?php if ( ! is_page( 'contact' ) ) : ?>
-	<div class="image--holder">
 		<?php if ( is_front_page() ) : ?>
 			<?php if ( ! empty( $homepage_footer_image ) ) : ?>
 				<div class="image__holder">
@@ -34,7 +33,6 @@
 				</div>
 			<?php endif; ?>
 		<?php endif; ?>
-	</div>
 	<div class="footer--box">
 		<?php get_template_part( 'components/social-icons' ); ?>
 		<div class="business--info">

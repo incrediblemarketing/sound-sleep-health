@@ -1,6 +1,10 @@
 .block--large_image_section {
-  margin: 75px 0 0 100px;
+  margin: 75px 0 0 15px;
   z-index: 0;
+
+  @include mq(md) {
+    margin: 75px 0 0 5vw;
+  }
 
   .image__holder {
     @include absolute_cover();
@@ -12,28 +16,49 @@
       object-fit: cover;
       z-index: -1;
       opacity: 0.5;
+      object-position: 60%;
+
+      @include mq(md) {
+        object-position: unset;
+      }
     }
 
     &::after {
       content: "";
       @include absolute_cover;
-      background: linear-gradient(
-        270deg,
-        rgba(0, 7, 44, 0.0001) 23.62%,
-        #00072c 100%
-      );
+      background: rgba(#00072c, 0.7);
       z-index: 0;
+
+      @include mq(md) {
+        background: linear-gradient(
+          270deg,
+          rgba(0, 7, 44, 0.0001) 23.62%,
+          #00072c 100%
+        );
+      }
     }
   }
 
   .image--section {
-    padding: 100px 0;
+    padding: 50px 0;
     color: $white;
     position: relative;
     overflow: hidden;
-    min-height: 800px;
+    min-height: 500px;
     display: flex;
     align-items: flex-end;
+
+    @include mq(md) {
+      padding: 5vw 0;
+    }
+
+    @include mq(xl) {
+      min-height: 800px;
+    }
+
+    > .row {
+      margin: 0;
+    }
   }
 
   h2 {
@@ -49,6 +74,10 @@
       position: absolute;
       top: 25px;
       right: 103%;
+
+      @include mq($until: md) {
+        display: none;
+      }
     }
   }
 
@@ -62,7 +91,10 @@
     margin-bottom: 54px;
     padding-bottom: 46px;
     border-bottom: 1px solid #d2d2d2;
-    margin-left: 110px;
+
+    @include mq(lg) {
+      margin-left: 5.2vw;
+    }
 
     strong {
       color: $primary;
@@ -74,8 +106,12 @@
     padding: 0;
     margin: 0 0 35px;
     list-style: none;
-    column-count: 2;
+    column-count: 1;
     column-gap: 1vw;
+
+    @include mq(sm) {
+      column-count: 2;
+    }
 
     li {
       padding-left: 19px;

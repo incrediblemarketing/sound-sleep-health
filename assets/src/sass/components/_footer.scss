@@ -11,7 +11,12 @@
 
 footer {
   background: $white;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
+
+  @include mq(md) {
+    padding-bottom: 100px;
+  }
+
   .image__holder {
     position: relative;
     img {
@@ -29,10 +34,10 @@ footer {
     }
   }
   .footer--box {
-    padding: 162px 100px 0;
-    transform: translateY(-343px);
+    padding: 100px 5vw 0;
+    transform: translateY(-17vw);
     width: calc(100% - 220px);
-    margin: 0 auto -270px;
+    margin: 0 auto -6vw;
     background: linear-gradient(
       180deg,
       #ffffff 0%,
@@ -42,15 +47,52 @@ footer {
     border-radius: 5px;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 5vw);
+
+    @include mq(md) {
+      padding: 162px 5vw 0;
+      margin: 0 auto -11vw;
+    }
+    @include mq(xl) {
+      width: calc(100% - 220px);
+      flex-wrap: unset;
+    }
 
     .business--info {
       display: flex;
-      @include fontSize(24);
+      flex-wrap: wrap;
+      @include fontSize(18);
       line-height: em(36, 24);
       color: $charcoal;
+      width: 100%;
+
+      @include mq(lg) {
+        @include fontSize(20);
+      }
+      @include mq(xl) {
+        width: auto;
+        flex-wrap: unset;
+      }
+      @include mq(xxl) {
+        @include fontSize(24);
+      }
 
       .single--business {
-        padding-right: 48px;
+        width: 100%;
+        margin-bottom: 45px;
+
+        @include mq(md) {
+          width: 50%;
+          margin-bottom: 0px;
+        }
+
+        @include mq(xl) {
+          width: auto;
+        }
+        @include mq(xxl) {
+          padding-right: 48px;
+        }
       }
 
       p {
@@ -66,13 +108,17 @@ footer {
 
         &.directions {
           a {
-            font-size: 24px;
+            font-size: 18px;
             line-height: em(36, 24);
             color: $primary;
             text-decoration: underline;
             position: relative;
             left: 0;
             transition: all 0.4s ease-in-out;
+
+            @include mq(lg) {
+              font-size: 24px;
+            }
 
             &:hover {
               left: 10px;
@@ -83,16 +129,35 @@ footer {
     }
 
     .form--area {
-      padding: 0 46px;
-      width: 38vw;
+      padding: 35px 0 0;
+      width: 100%;
+
+      @include mq(xl) {
+        width: 38vw;
+        padding: 0 0 0 46px;
+      }
+      @include mq(xxl) {
+        padding: 0 46px;
+      }
+
+      .btn--primary {
+        @include mq($until: md) {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
     }
 
     .social-icons {
       position: absolute;
-      top: 45px;
+      top: 25px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
+
+      @include mq(md) {
+        top: 45px;
+      }
 
       li {
         a {
@@ -117,8 +182,13 @@ footer {
     text-align: center;
     font-size: 16px;
     line-height: 22px;
-    font-weight: 600;
+    font-weight: 400;
     color: $charcoal;
+    padding: 0 15px;
+
+    @include mq(md) {
+      font-weight: 600;
+    }
 
     a {
       color: $charcoal;
@@ -130,15 +200,27 @@ footer {
   }
 
   .orange--area {
-    padding: 99px 375px 148px;
+    padding: 60px 15px;
     margin-bottom: 65px;
     background: $primary;
     color: $white;
 
+    @include mq(md) {
+      padding: 60px 9vw;
+    }
+
+    @include mq(xxl) {
+      padding: 99px 19vw 148px;
+    }
+
     .social-icons {
       display: flex;
       justify-content: center;
-      margin-bottom: 10vh;
+      margin-bottom: 35px;
+
+      @include mq(xl) {
+        margin-bottom: 10vh;
+      }
 
       li {
         a {
@@ -160,21 +242,42 @@ footer {
 
     .business--info {
       display: flex;
+      flex-wrap: wrap;
+
+      @include mq(md) {
+        flex-wrap: unset;
+      }
 
       .single--business {
-        width: 50%;
+        width: 100%;
+        margin-bottom: 35px;
+
+        @include mq(md) {
+          width: 50%;
+          margin-bottom: 0;
+        }
 
         &:first-child {
-          padding-right: 50px;
+          padding-right: 15px;
+          @include mq(lg) {
+            padding-right: 50px;
+          }
         }
         &:last-child {
-          padding-left: 50px;
+          padding-left: 15px;
+          @include mq(lg) {
+            padding-left: 50px;
+          }
         }
 
         iframe {
           width: 100%;
-          height: 472px;
+          height: 300px;
           margin-bottom: 25px;
+
+          @include mq(xl) {
+            height: 472px;
+          }
         }
 
         .directions {

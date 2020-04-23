@@ -23,7 +23,7 @@ $logo_gallery = get_sub_field( 'logo_gallery' );
 			<?php echo $content_1; ?>
 			<a href="<?php echo $page_link; ?>"	class="btn--circle btn--orange">Learn more</a>
 		</div>
-		<div class="col-xl-7">
+		<div class="col-xl-7 logo--area">
 			<?php if ( $logo_gallery ) : ?>
 				<?php $logo_counter = 1; ?>
 				<div class="logo--grid">

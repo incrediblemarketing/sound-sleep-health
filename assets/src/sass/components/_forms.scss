@@ -7,7 +7,11 @@
   ul.gform_fields {
     li.gfield {
       padding: 0 !important;
-      margin: 0 0 40px;
+      margin: 0 0 15px;
+
+      @include mq(md) {
+        margin: 0 0 40px;
+      }
       label {
         display: none;
       }

@@ -35,11 +35,29 @@
           color: $white;
         }
       }
+
+      .sub-menu {
+        li {
+          a {
+            color: $charcoal;
+
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
     }
     .text,
     .call,
     .btn-contact {
       color: $white;
+    }
+
+    button[data-toggle="menu"] {
+      span {
+        background: $white;
+      }
     }
 
     &.sticky {
@@ -56,11 +74,28 @@
             }
           }
         }
+        .sub-menu {
+          li {
+            a {
+              color: $charcoal;
+
+              &:hover {
+                color: $white;
+              }
+            }
+          }
+        }
       }
       .text,
       .call,
       .btn-contact {
         color: $charcoal;
+      }
+
+      button[data-toggle="menu"] {
+        span {
+          background: $charcoal;
+        }
       }
     }
   }

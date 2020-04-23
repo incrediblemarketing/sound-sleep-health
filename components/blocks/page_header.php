@@ -25,10 +25,11 @@ $image   = get_sub_field( 'background_image' );
 			<?php echo im_the_placeholder_image( 'hero_thumb' ); ?>
 		</div>
 <?php endif; ?>
-<div class="shadow--box"></div>
+
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xl-5 offset-xl-1 column-1">
+		<div class="col-xxl-5 offset-xl-1 col-xl-6 col-lg-8 col-md-10 column-1">
+			<div class="shadow--box"></div>
 			<?php echo $content; ?>
 			<a href="/contact-us/" class="btn--line">Call or book your appointment online</a>
 		</div>
