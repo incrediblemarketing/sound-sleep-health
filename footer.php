@@ -43,7 +43,7 @@
 					echo '<div class="single--business">';
 					echo '<p class="address"><i class="fas fa-map-marker-alt"></i> ' . get_sub_field( 'business_street_address' ) . '<br/>' . get_sub_field( 'business_city_state_zip' ) . '</p>';
 					echo '<p class="directions"><a href="' . get_sub_field( 'business_address_link' ) . '" target="_blank">Directions</a>';
-					echo '<p class="phone"><i class="fas fa-phone"></i> ' . get_sub_field( 'business_phone_display' ) . '</p>';
+					echo '<p class="phone"><i class="fas fa-phone"></i> <a href="tel:' . get_sub_field( 'business_phone_url' ) . '">' . get_sub_field( 'business_phone_display' ) . '</a></p>';
 					echo '<p class="fax"><i class="fas fa-fax"></i> ' . get_sub_field( 'business_fax' ) . '</p>';
 					echo '<p><a href="' . get_sub_field( 'page_link' ) . '" class="btn--primary">Request an appointment</a></p>';
 					echo '</div>';
