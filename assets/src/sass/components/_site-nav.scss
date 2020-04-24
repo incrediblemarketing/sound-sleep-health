@@ -113,7 +113,7 @@
     width: 100%;
     justify-content: center;
 
-    @include mq(lg) {
+    @include mq(xl) {
       display: flex;
     }
 
@@ -128,7 +128,7 @@
       position: relative;
       text-align: left;
 
-      @include mq(lg) {
+      @include mq(xxl) {
         font-size: 18px;
       }
 
@@ -349,7 +349,7 @@
     padding: 0;
     margin-left: 20px;
 
-    @include mq(lg) {
+    @include mq(xl) {
       display: none;
     }
 
@@ -382,18 +382,21 @@
     background: rgba($white, 0.9);
     box-shadow: rgba($black, 0.1) 4px 4px 10px;
 
-    @include mq(lg) {
+    @include mq(xl) {
       padding: 0 15px;
     }
-    @include mq(xl) {
+    @include mq(xxl) {
       padding: 0 25px;
     }
 
     .ssh-logo {
       @include mq(lg) {
-        height: 30px;
+        height: 40px;
       }
       @include mq(xl) {
+        height: 32px;
+      }
+      @include mq(xxl) {
         height: 40px;
       }
     }
@@ -411,11 +414,10 @@
           align-items: center;
           justify-content: center;
           font-size: 15px;
-          padding: 0 3px;
+          padding: 0 2px;
 
           @include mq(xl) {
             font-size: 16px;
-            padding: 0 10px;
           }
           @include mq(xxl) {
             font-size: 18px;

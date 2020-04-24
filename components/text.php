@@ -11,14 +11,12 @@
  * @since      1.0.0
  */
 
-	$business_location      = get_field( 'business_info', 'options' )[0];
-	$business_phone_display = $business_location['business_phone_display'];
-	$business_phone_url     = $business_location['business_phone_url'];
+	$text = get_field( 'text_number', 'options' );
 
 ?>
 
-<?php if ( $business_phone_display && $business_phone_url ) : ?>
-	<a class="text" href="sms:<?php echo esc_attr( $business_phone_url ); ?>">
+<?php if ( $text ) : ?>
+	<a class="text" href="sms:<?php echo esc_attr( $text ); ?>">
 		<i class="fal fa-mobile-alt"></i>
 	</a>
 <?php endif; ?>

@@ -11,7 +11,7 @@
  * @since      1.0.0
  */
 
-$image = get_sub_field( 'background_image' );
+$image = get_sub_field( 'background_image' ) ?: get_field('header_image', 'options');
 
 ?>
 

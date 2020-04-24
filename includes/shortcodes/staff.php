@@ -31,8 +31,8 @@ function shortcode_staff() {
 			$staff->the_post();
 			$content .= '<div class="block__team-member">';
 			$content .= get_the_post_thumbnail( $post->ID, 'featured_thumb' );
-			$content .= '<h3>' . get_the_title() . '</h3>';
-			$content .= '<h5>' . get_sub_field( 'job_title' ) . '</h5>';
+			$content .= '<h2>' . get_the_title() . '</h2>';
+			$content .= '<h5>' . get_field( 'position' ) . '</h5>';
 			$content .= get_the_content();
 			$content .= '</div>';
 			endwhile;

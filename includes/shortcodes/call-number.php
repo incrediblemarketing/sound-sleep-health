@@ -15,8 +15,9 @@
  * Display call phone number shortcode [call_number]
  */
 function shortcode_call_number() {
-	$text = get_field( 'business_phone_display', 'options' );
-	$tel  = get_field( 'business_phone_url', 'options' );
+	$business_location = get_field( 'business_info', 'options' )[0];
+	$text              = $business_location['business_phone_display'];
+	$tel               = $business_location['business_phone_url'];
 
 	if ( $text && $tel ) :
 		return '<a href="tel:' . $tel . '">' . $text . '</a>';

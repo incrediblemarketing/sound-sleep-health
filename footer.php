@@ -19,7 +19,7 @@
 ?>
 
 <footer class="footer">
-	<?php if ( ! is_page( 'contact' ) ) : ?>
+	<?php if ( ! is_page( array( 530, 165 ) ) ) : ?>
 		<?php if ( is_front_page() ) : ?>
 			<?php if ( ! empty( $homepage_footer_image ) ) : ?>
 				<div class="image__holder">
