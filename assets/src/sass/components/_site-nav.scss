@@ -223,7 +223,7 @@
 
   .ssh-logo {
     width: auto;
-    height: 30px;
+    height: 27px;
 
     @include mq(md) {
       height: 40px;
@@ -252,9 +252,18 @@
 
     .text {
       margin-right: 25px;
-      font-size: 30px;
+      font-size: 28px;
       color: $charcoal;
       display: none;
+      text-align: center;
+
+      p {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $gray-font;
+        line-height: 1.375em;
+        font-weight: bold;
+      }
 
       @include mq(lg) {
         display: block;
@@ -284,7 +293,7 @@
 
       @include mq(xl) {
         margin-left: 30px;
-        margin-right: 101px;
+        margin-right: 31px;
       }
 
       strong {
@@ -324,13 +333,71 @@
     }
 
     .btn-contact {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.375em;
       text-transform: uppercase;
-      color: $charcoal;
-      font-weight: 800;
+      font-weight: 600;
       margin-left: 31px;
       display: none;
+      color: $gray-font;
+
+      strong {
+        color: $charcoal;
+        font-weight: 900;
+        display: block;
+        font-weight: bolder;
+      }
+
+      @include mq(lg) {
+        display: block;
+      }
+    }
+    .btn--appointment {
+      font-size: 18px;
+      line-height: 1.375em;
+      text-transform: uppercase;
+      color: $gray-font;
+      font-weight: 600;
+      margin-left: 10px;
+
+      @include mq(md) {
+        margin-left: 31px;
+        margin-right: 31px;
+      }
+
+      strong {
+        color: $charcoal;
+        font-weight: 900;
+        font-weight: bolder;
+        display: none;
+
+        @include mq(md) {
+          display: block;
+        }
+      }
+
+      span {
+        display: none;
+
+        @include mq(md) {
+          display: block;
+        }
+      }
+
+      i {
+        color: $white;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary;
+        border-radius: 100em;
+        font-size: 15px;
+        @include mq(md) {
+          display: none;
+        }
+      }
 
       @include mq(lg) {
         display: block;
@@ -347,7 +414,11 @@
     background: transparent;
     border: none;
     padding: 0;
-    margin-left: 20px;
+    margin-left: 10px;
+
+    @include mq(md) {
+      margin-left: 20px;
+    }
 
     @include mq(xl) {
       display: none;
@@ -414,11 +485,8 @@
           align-items: center;
           justify-content: center;
           font-size: 15px;
-          padding: 0 2px;
+          padding: 0 1px;
 
-          @include mq(xl) {
-            font-size: 16px;
-          }
           @include mq(xxl) {
             font-size: 18px;
             padding: 0 15px;
@@ -454,10 +522,23 @@
 
       span,
       strong {
-        font-size: 15px;
+        font-size: 14px;
         @include mq(xxl) {
           font-size: 18px;
         }
+      }
+    }
+
+    .btn--appointment {
+      font-size: 14px;
+      margin-right: 0;
+      margin-left: 10px;
+      @include mq(xl) {
+        margin-right: 0;
+        margin-left: 15px;
+      }
+      @include mq(xxl) {
+        font-size: 18px;
       }
     }
   }

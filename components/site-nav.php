@@ -32,7 +32,9 @@
 		<div class="line"></div>
 		<?php get_template_part( 'components/call' ); ?>
 		<div class="line"></div>
-		<a href="/contact-us/" class="btn-contact">Leave us a message</a>
+		<a href="/request-an-appointment/" class="btn--appointment"><i class="fas fa-envelope"></i><strong>Request an</strong> <span>Appointment</span></a>
+		<div class="line"></div>
+		<a href="/contact-us/" class="btn-contact"><strong>Leave us</strong> a message</a>
 	</div>
 
 	<button data-toggle="menu">

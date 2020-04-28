@@ -18,5 +18,6 @@
 <?php if ( $text ) : ?>
 	<a class="text" href="sms:<?php echo esc_attr( $text ); ?>">
 		<i class="fal fa-mobile-alt"></i>
+		<p>Text</p>
 	</a>
 <?php endif; ?>

@@ -25,13 +25,17 @@
     @include fontSize(65);
 
     @include mq(md) {
-      letter-spacing: 1.5vw;
+      letter-spacing: 1.2vw;
       @include fontSize(100);
     }
     @include mq(lg) {
       @include fontSize(114);
     }
     @include mq(xl) {
+      letter-spacing: 1.45vw;
+      @include fontSize(124);
+    }
+    @include mq(xxl) {
       letter-spacing: 1.85vw;
       @include fontSize(124);
     }
@@ -52,11 +56,8 @@
 
     h2 {
       text-align: left;
-      margin-bottom: 0;
+      margin-bottom: auto;
 
-      @include mq(md) {
-        height: 100px;
-      }
       a {
         font-style: italic;
         font-weight: 500;
@@ -92,6 +93,7 @@
     line-height: em(32, 14);
     font-style: italic;
     margin-bottom: 0;
+    margin-top: auto;
   }
 
   article {
