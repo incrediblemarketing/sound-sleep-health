@@ -29,5 +29,13 @@
 <body <?php body_class(); ?>>
 
 	<div class="site-wrap">
+		<?php
+		$banner = get_field( 'site_banner', 'option' );
+		if ( $banner ) :
+			?>
+			<div class="top-banner">
+				<?php echo $banner; ?>
+			</div>
+		<?php endif; ?>
 	<?php get_template_part( 'components/mobile-menu' ); ?>
 		<?php get_template_part( 'components/site-nav' ); ?>

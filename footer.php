@@ -16,6 +16,7 @@
 	$copyright             = get_field( 'copyright', 'option' );
 	$homepage_footer_image = get_field( 'homepage_footer_image', 'option' );
 	$inner_footer_image    = get_field( 'footer_image', 'option' );
+	$popup                 = get_field( 'pop_up_info', 'option' );
 ?>
 
 <footer class="footer">
@@ -81,7 +82,11 @@
 </footer>
 
 </div><!-- end of .site-wrap -->
-
+<?php if ( $popup && is_front_page() ) : ?>
+	<div id="homepage-popup" class="mfp-hide">
+		<?php echo $popup; ?>
+	</div>
+<?php endif; ?>
 <?php wp_footer(); ?>
 </body>
 

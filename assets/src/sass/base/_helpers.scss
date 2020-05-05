@@ -180,3 +180,24 @@
     margin: 0 auto;
   }
 }
+
+#homepage-popup {
+  width: 500px;
+  max-width: 100%;
+  background: $primary;
+  padding: 35px;
+  text-align: center;
+  color: $white;
+  font-family: $garamond-pro;
+  margin: 0 auto;
+  position: relative;
+  font-size: 22px;
+
+  p:last-of-type {
+    margin: 0;
+  }
+
+  .mfp-close {
+    color: $white;
+  }
+}

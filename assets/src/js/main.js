@@ -25,7 +25,20 @@
           this.mobileMenu();
           this.siteNavSticky();
           this.galleryBuilder();
-          this.swiperSetup();
+					this.swiperSetup();
+					this.homepagePopup();
+				},
+				homepagePopup: function(){
+					setTimeout(function() {
+						if ($('#homepage-popup').length) {
+							$.magnificPopup.open({
+											 items: {
+													 src: '#homepage-popup' 
+											 },
+											 type: 'inline'
+												 });
+											}
+										}, 1000);
         },
         siteNavSticky: function() {
           $cache.window.scroll(function() {

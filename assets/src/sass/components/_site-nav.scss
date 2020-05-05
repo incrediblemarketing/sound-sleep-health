@@ -10,7 +10,7 @@
   align-items: center;
   position: fixed;
   left: 0;
-  top: 0;
+  top: 60px;
   width: 100%;
   z-index: 99;
   transition: all 0.5s ease-in-out;
@@ -50,8 +50,14 @@
     }
     .text,
     .call,
-    .btn-contact {
+    .btn-contact,
+    .btn--appointment {
       color: $white;
+
+      span,
+      strong {
+        color: $white;
+      }
     }
 
     button[data-toggle="menu"] {
@@ -90,6 +96,21 @@
       .call,
       .btn-contact {
         color: $charcoal;
+
+        span {
+          color: $charcoal;
+        }
+        strong {
+          color: #bebebe;
+        }
+      }
+      .btn--appointment {
+        span {
+          color: #bebebe;
+        }
+        strong {
+          color: $charcoal;
+        }
       }
 
       button[data-toggle="menu"] {
@@ -442,13 +463,21 @@
 
   // offset if WP admin bar is present
   .admin-bar & {
-    top: 46px;
+    top: 150px;
     @media (min-width: 783px) {
-      top: 32px;
+      top: 102px;
+    }
+    @include mq($until: sm) {
+      top: 195px;
+    }
+
+    &.sticky {
+      top: 0;
     }
   }
 
   &.sticky {
+    top: 0;
     padding: 13px 15px;
     background: rgba($white, 0.9);
     box-shadow: rgba($black, 0.1) 4px 4px 10px;
@@ -540,6 +569,34 @@
       @include mq(xxl) {
         font-size: 18px;
       }
+    }
+  }
+}
+
+.top-banner {
+  background: $primary;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 10px 15px;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mq($until: md) {
+    flex-direction: column;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .btn--primary {
+    margin-left: 15px;
+    @include mq($until: md) {
+      margin: 10px auto 0;
+      height: 35px;
     }
   }
 }
