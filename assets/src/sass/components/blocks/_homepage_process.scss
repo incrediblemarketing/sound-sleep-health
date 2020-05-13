@@ -46,59 +46,192 @@
     }
   }
 
-  .grid--content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 10vw 5vw;
-    padding: 0;
-
-    @include mq(md) {
-      padding: 0 15px;
-      grid-gap: 10vw 5vw;
-      grid-template-columns: 1fr 1fr;
-    }
+  .grid--timeline {
+    position: relative;
+    flex-flow: column wrap;
+    width: 710px;
+    margin: 0 auto;
+    max-width: 100%;
 
     @include mq(lg) {
-      padding: 0 45px;
-      grid-gap: 9vw 10vw;
+      width: 890px;
     }
 
-    .content--single {
-      padding-left: 0;
-      position: relative;
+    @include mq(xl) {
+      width: 1170px;
+    }
+
+    .timeline--line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-50%);
+      height: 100%;
+      width: 3px;
+      background: $white;
 
       @include mq(md) {
-        padding-left: 90px;
+        left: 50%;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        height: 15px;
+        width: 15px;
+        background: $white;
+        border-radius: 100em;
+        position: absolute;
+        top: 0;
+        left: 1px;
+        transform: translateX(-50%);
+      }
+
+      &::after {
+        bottom: 0;
+        top: auto;
+      }
+    }
+
+    .timeline--single {
+      display: flex;
+      width: calc(100% - 15px);
+      max-width: 100%;
+      background: $white;
+      height: auto;
+      flex-direction: column;
+      box-shadow: rgba($black, 0.1) 4px 7px 7px;
+      border-top: 4px solid $orange;
+      color: $charcoal;
+      border-radius: 0 0 10px 10px;
+      position: relative;
+      margin-left: 15px;
+      margin-top: 35px;
+
+      @include mq(md) {
+        width: 330px;
+        margin-left: 0;
       }
 
       @include mq(lg) {
-        padding-left: 150px;
+        width: 410px;
+      }
+      @include mq(xl) {
+        width: 470px;
       }
 
-      .icon {
-        position: relative;
-        top: 0;
-        left: 0;
-        margin: 0 0 25px 25px;
-        float: right;
+      &::before {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 1px;
+        background: $white;
+        position: absolute;
+        left: -15px;
+        top: 30%;
 
         @include mq(md) {
-          float: none;
-          margin: 0;
-          position: absolute;
+          left: auto;
+          right: -35px;
         }
         @include mq(lg) {
-          margin: 38px;
-          position: absolute;
+          right: -35px;
+        }
+        @include mq(xl) {
+          right: -116px;
         }
       }
 
-      h3 {
-        font-style: italic;
-        font-weight: 500;
-        @include fontSize(42);
-        line-height: em(50, 42);
-        margin-bottom: 16px;
+      &:nth-child(odd) {
+        margin-left: auto;
+
+        @include mq(md) {
+          margin-top: -220px;
+        }
+
+        &::before {
+          right: auto;
+          left: -15px;
+
+          @include mq(md) {
+            left: -27px;
+          }
+
+          @include mq(lg) {
+            left: -35px;
+          }
+          @include mq(xl) {
+            left: -116px;
+          }
+        }
+      }
+
+      .timeline--inner {
+        position: relative;
+      }
+
+      .timeline--header {
+        padding: 8px;
+        background: $orange;
+        color: $white;
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+        left: 20px;
+        z-index: 5;
+        border-radius: 8px;
+
+        h5 {
+          color: $white;
+          font-size: 1rem;
+        }
+      }
+
+      .timeline--image {
+        position: relative;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .timeline--bottom {
+        padding: 30px;
+
+        ol {
+          font-size: 1rem;
+        }
+      }
+
+      .timeline--icon {
+        position: absolute;
+        left: 25px;
+        top: 31vw;
+        background: $orange;
+        padding: 15px;
+        border-radius: 100em;
+        width: 60px;
+        height: 60px;
+
+        @include mq(md) {
+          top: 110px;
+        }
+
+        @include mq(lg) {
+          width: 75px;
+          height: 75px;
+        }
+
+        @include mq(xl) {
+          top: 160px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }

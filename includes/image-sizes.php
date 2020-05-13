@@ -12,6 +12,7 @@
  */
 
 add_image_size( 'blog_preview_thumb', 380, 275, true );
+add_image_size( 'timeline_thumb', 470, 220, true );
 add_image_size( 'featured_thumb', 535, 402, true );
 add_image_size( 'parent_thumb', 715, 715, true );
 add_image_size( 'background_thumb', 1430, 569, true );
@@ -38,7 +39,8 @@ function im_image_sizes( $sizes ) {
 			'page_header_thumb'  => __( 'Page Header Thumbnail' ),
 			'blog_row_thumb'     => __( 'Blog Row Thumbnail' ),
 			'post_large'         => __( 'Post Large' ),
-			'circle_thumb'         => __( 'Circle Image' ),
+			'circle_thumb'       => __( 'Circle Image' ),
+			'timeline_thumb'     => __( 'Timeline Image' ),
 		)
 	);
 }

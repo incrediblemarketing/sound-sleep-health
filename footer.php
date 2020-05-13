@@ -83,9 +83,11 @@
 
 </div><!-- end of .site-wrap -->
 <?php if ( $popup && is_front_page() ) : ?>
+<!--
 	<div id="homepage-popup" class="mfp-hide">
 		<?php echo $popup; ?>
 	</div>
+-->
 <?php endif; ?>
 <?php wp_footer(); ?>
 </body>
