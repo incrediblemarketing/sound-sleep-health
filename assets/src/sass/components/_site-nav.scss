@@ -153,6 +153,11 @@
       @include mq(xxl) {
         font-size: 18px;
       }
+      &.menu-item-1700 {
+        a {
+          color: $orange;
+        }
+      }
 
       &.current-menu-parent,
       &.current_page_item {
