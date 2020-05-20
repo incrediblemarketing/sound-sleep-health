@@ -89,6 +89,12 @@
 	</div>
 -->
 <?php endif; ?>
+<script type="text/javascript">
+  window.klaraWidget = window.klaraWidget || [];
+  window.klaraWidget.push(["setWidgetId", "8c8f8aba-9306-4697-b14c-be1e7de3719e"]);
+</script>
+
+<script type="text/javascript" src="https://s3.amazonaws.com/widget-frontend.klara.com/bundle.js"> </script>
 <?php wp_footer(); ?>
 </body>
 

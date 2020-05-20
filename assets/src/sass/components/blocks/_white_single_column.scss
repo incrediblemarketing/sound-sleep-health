@@ -49,6 +49,15 @@
       }
     }
   }
+  .inner-block {
+    background: #fff;
+
+    @include mq(xl) {
+      padding: 5vw;
+      transform: translateY(-45vh);
+      margin-bottom: -45vh;
+    }
+  }
 
   .gform_wrapper {
     form {

@@ -10,7 +10,7 @@
 
   @include mq(md) {
     align-items: unset;
-    padding-top: 36vh;
+    padding-top: 29vh;
   }
 
   &::after {
@@ -107,7 +107,7 @@
     z-index: -1;
 
     @include mq(md) {
-      top: 26vh;
+      top: 21vh;
       width: 530px;
       height: 575px;
       bottom: unset;
