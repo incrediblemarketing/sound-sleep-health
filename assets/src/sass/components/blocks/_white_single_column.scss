@@ -49,8 +49,9 @@
       }
     }
   }
+
   .inner-block {
-    background: #fff;
+    background: rgba($white, 0.9);
 
     @include mq(xl) {
       padding: 5vw;
