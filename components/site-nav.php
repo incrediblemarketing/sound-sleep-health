@@ -28,8 +28,6 @@
 	?>
 
 	<div class="header--right">
-		<?php get_template_part( 'components/text' ); ?>
-		<div class="line"></div>
 		<?php get_template_part( 'components/call' ); ?>
 		<div class="line"></div>
 		<a href="/request-an-appointment/" class="btn--appointment"><i class="fas fa-envelope"></i><strong>Request an</strong> <span>Appointment</span></a>
