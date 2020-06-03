@@ -103,12 +103,12 @@
           color: $charcoal;
         }
         strong {
-          color: #bebebe;
+          color: $charcoal;
         }
       }
       .btn--appointment {
         span {
-          color: #bebebe;
+          color: $charcoal;
         }
         strong {
           color: $charcoal;
@@ -327,7 +327,7 @@
       strong {
         font-size: 16px;
         line-height: 1.375em;
-        color: $gray-font;
+        color: $charcoal;
         text-transform: uppercase;
         display: none;
 
@@ -367,7 +367,7 @@
       font-weight: 600;
       margin-left: 31px;
       display: none;
-      color: $gray-font;
+      color: $charcoal;
 
       strong {
         color: $charcoal;
@@ -384,7 +384,7 @@
       font-size: 18px;
       line-height: 1.375em;
       text-transform: uppercase;
-      color: $gray-font;
+      color: $charcoal;
       font-weight: 600;
       margin-left: 10px;
 
@@ -429,6 +429,19 @@
 
       @include mq(lg) {
         display: block;
+      }
+    }
+
+    .call,
+    .btn-contact,
+    .btn--appointment {
+      &:hover {
+        color: $primary !important;
+
+        span,
+        strong {
+          color: $primary !important;
+        }
       }
     }
   }

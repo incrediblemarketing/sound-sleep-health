@@ -30,13 +30,18 @@ $image         = get_sub_field( 'image' );
 			<h2><?php echo esc_attr( $content_title ); ?></h2>
 			<div class="content--box">
 				<div class="testimonial--area">
-				<?php
-				if ( $testimonial ) :
-							$post = $testimonial;
-							setup_postdata( $post );
-					?>
-					<div class="quote--area">
-						<?php echo the_content(); ?> <strong><?php the_title(); ?></strong>
+				<?php if ( $testimonial ) : ?>
+					<div class="swiper-container testimonial--container">
+						<div class="swiper-wrapper">
+							<?php
+							foreach ( $testimonial as $post ) :
+								setup_postdata( $post );
+								?>
+							<div class="swiper-slide quote--area">
+								<?php echo the_content(); ?> <strong><?php the_title(); ?></strong>
+							</div>
+							<?php endforeach; ?>
+						</div>
 					</div>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>

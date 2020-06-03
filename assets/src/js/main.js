@@ -241,6 +241,17 @@
               prevEl: ".swiper-button-prev"
             }
           });
+          var testimonial_block = new Swiper(".testimonial--container", {
+						slidesPerView: 1,
+						autoplay: {
+							delay: 4500,
+						},
+            loop: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev"
+            }
+          });
         }
       }
     };

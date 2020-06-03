@@ -46,7 +46,7 @@
       @extend h5;
 
       @include mq(md) {
-        color: $white;
+        color: $black;
       }
     }
 
@@ -59,7 +59,7 @@
 
       @include mq(md) {
         @include fontSize(124);
-        color: $white;
+        color: $black;
       }
     }
   }
